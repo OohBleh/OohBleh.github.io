@@ -94,7 +94,7 @@ After 10 trillions seeds searched, it was time for a new approach.
 
 ### the GPU seed farm
 
-After several helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational, allowing for simultaneous computation with tens of thousands of [threads](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)).  To optimize performance, we feed in the most efficient constraints into CUDA: $$\mathcal{N}$$ and $$\mathcal{C}$$.  Any seeds that pass these filters get save to a text file which can later be fed through the C++ program for further analysis.  
+After several helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational, allowing for simultaneous computation with tens of thousands of [threads](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)).  To optimize performance, we feed in the most efficient constraints into CUDA: $\mathcal{N}$ and $\mathcal{C}$.  Any seeds that pass these filters get save to a text file which can later be fed through the C++ program for further analysis.  
 
 To understand the strength of the card reward filter, consider the following set of "unhelpful" Silent cards: 
 
