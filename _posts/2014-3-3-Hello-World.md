@@ -51,7 +51,7 @@ While I believe this seed is unwinnable due to the damage that must be taken to 
 ### the GPU seed farm!
 
 {:refdef: style="text-align: center;"}
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="330px" width="708px"}
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="330px" width="354px"}
 {: refdef}
 
 {:refdef: style="text-align: center;"}
