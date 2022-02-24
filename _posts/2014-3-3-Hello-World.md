@@ -125,6 +125,6 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 4.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
 5.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
 
-### Case 1: $$R = $$ Ring of Snake and Outmaneuver is skipped
-### Case 2: $$R = $$ Ring of Snake and Outmaneuver is skipped
-### Case 3: $$R = $$ Cursed Key
+### Case 1: No boss relic swap and Outmaneuver is skipped
+### Case 2: No boss relic swap and Outmaneuver is taken
+### Case 3: Swap Ring of the Snake for Cursed Key
