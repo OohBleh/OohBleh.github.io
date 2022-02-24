@@ -56,9 +56,13 @@ While I believe this seed is unwinnable due to the damage that must be taken to 
 
 ### the GPU seed farm!
 
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="660px" width="708px"}
+{:refdef: style="text-align: center;"}
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="330px" width="708px"}
+{: refdef}
 
+{:refdef: style="text-align: center;"}
 ![bad map wow](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/heinous-map.png){:height="241px" width="304px"}
+{: refdef}
 
 After limited success with sts_seed_search and many helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](asdf).  In short, CUDA can be used to 
 
