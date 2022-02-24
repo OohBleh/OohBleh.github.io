@@ -52,7 +52,10 @@ Neow also offers 1 removal, 100g, and 250g for lost max HP.
 
 While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  
 
-### post-CUDA clarity
+### the GPU seed farm!
+
+[a picture of bad Silent cards]({{site.baseurl}}/_posts/bad-silent-cards.png)
+
 After limited success with sts_seed_search and many helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](asdf).  In short, 
 
 
