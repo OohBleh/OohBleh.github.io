@@ -127,21 +127,12 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 
 ### Case 1: No boss relic swap and Outmaneuver is skipped
 In this case, the maximum damage done on any given turn is attained by playing 3 copies of Strike and Neutralize.  The player may deal damage on at most 4 turns with a strength of 0, 3 with a strength of -2, and 3 with a strength of -4.  Before Lagavulin applies the 3rd debuff, the player can deal at most 
-
 {:refdef: style="text-align: center;"}
-$$
-	\overbrace{4\cdot (3\cdot 6 + 3)}^{\text{str. } =\; 0} + 
-	\overbrace{3\cdot (3\cdot 4 + 1)}^{\text{str. } =\; -2} + 
-	\overbrace{3\cdot (3\cdot 2 + 0)}^{\text{str. } =\; -4} = 
-	84 + 39 + 18 = 
-	141
-$$
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/no-energy-unlimited-draw.png){:height="100px" width="1168px"}
 {: refdef}
 damage to Lagavulin.  Since Lagavulin's HP exceeds 141, the run is unwinnable in this case.  
 
 ### Case 2: No boss relic swap and Outmaneuver is taken
-{:refdef: style="text-align: center;"}
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/no-energy-unlimited-draw.png){:height="1168px" width="100px"}
-{: refdef}
+
 
 ### Case 3: Swap Ring of the Snake for Cursed Key
