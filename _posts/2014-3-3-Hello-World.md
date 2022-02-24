@@ -39,7 +39,7 @@ I first got involved in this search in early January not long after finding and 
 
 I began my search on sts_seed_search with a variety of different search parameters.  Like Arbiter, I prioritized Neow bonuses, card rewards, and potions first since they are relatively fast to calculate and filter seeds efficiently.  I filtered based on the floor-0 rewards from Neow rewards of 5 (or sometimes 4) combats, assuming they were possible before the fight, and only filtered for maps with a forced floor 6 elite and no shops or rest sites beforehand.  I also filtered for "bad" potions in the first 5 (or 4) combats.  By this point, it was clear that the order of these filters mattered.  For example, generating the Act I map takes dozens of calls to random number generators, including many floating point calculations, whereas checking 5 card rewards for only "bad" cards costs, on average, fewer than 2 RNG calls.  
 
-Suppose we have two independent filters $$\mathcal{F}_1,\mathcal{F}_2$$ and consider the process of passing seeds uniformly at random though each.  If $t_1,t_2$ are good estimates for the times spend testing a seed against the filters, and $p_1,p_2$ are the probabilities of a seed passing the filters, then the expected time to test a seed against $$\mathcal{F_1}$$, and then $$\mathcal{F}_2$$ is 
+Suppose we have two independent filters $$\mathcal{F}_1,\mathcal{F}_2$$ and consider the process of passing seeds uniformly at random though each.  If $$t_1,t_2$$ are good estimates for the times spend testing a seed against the filters, and $$p_1,p_2$$ are the probabilities of a seed passing the filters, then the expected time to test a seed against $$\mathcal{F_1}$$, and then $$\mathcal{F}_2$$ is 
 {:refdef: style="text-align: center;"}
 $$
 	\mathbb{E}[
@@ -50,7 +50,7 @@ $$
     = t_1 + p_1t_2.  
 $$
 {: refdef}
-
+Reversing the order exchanges the indices 1 and 2.  
 
 Adjusting my search parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which has the following properties: 
 1. Neow also offers 1 removal, 100g, and 250g for lost max HP.
