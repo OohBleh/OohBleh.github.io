@@ -84,7 +84,11 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 4. property $$\mathcal{M}$$ is met and one of the floor 6 elites is the "burning" elite.  
 4. Events: Winged Statue (-7 HP for 1 removal), Scrap Ooze (5 or 6 hits for Tea Set), Wheel Gremlin (always gives 1 removal), and combat. 
 
-While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  After 10 trillions seeds searched, it was time for a new approach.  
+While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  
+
+It became clear to me that in order to find a suitable seed, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only 1 in $$~15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand ($$\mathcal{M}*$$), only 1 in every $$~225,000$$ seeds passes through.  
+
+After 10 trillions seeds searched, it was time for a new approach.  
 
 ### the GPU seed farm
 
@@ -96,7 +100,9 @@ To understand the strength of the card reward filter, consider the following set
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="660px" width="709px"}
 {: refdef}
 
-With the exception of Distraction, which has a _chance_ to be helpful against Lagavulin, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set is $1/100$.  
+With the exception of Distraction, which has a _chance_ to be helpful against Lagavulin, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as 1/100.  With 5 card rewards potentially possible before floor 6, roughly 1 in every 10 billion seeds will have 5 consecutive bad card rewards.  On a modern GPU, dozens of seeds pass both filters each second.  Even then, not enough seeds were passing through the remaining filters.  
+
+### 
 
 
 In fact, laziness is built into the code that found this seed.  Enhancing the approach by
