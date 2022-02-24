@@ -106,6 +106,6 @@ With the exception of Distraction, which has a _chance_ to be helpful against La
 
 ### An unimagineably unfair map
 
-To make the final breakthrough, I pressed harder on my combat constraints.  How likely is the player to encounter $$5$$ combats in a $$\mathcal{M}'$$ map?  What if we only had $$4$$, or even $$3$$ combats in total before fighting a buffed Lagavulin?  Checking the first hundred billion seeds, I made a startling discovery: as many as $$~2\%$$ of all $$\mathcal{M}^*$$ maps had a maximum of $$3$$ combats before floor 6.  Altogether, this new constraint $$\mathcal{M}''$$ was satisfied by roughly 1 in every $$\sim 9.17$$ million seeds, sampled from the first $$100$$ billion seeds.  
+To make the final breakthrough, I pressed harder on my combat constraints.  How likely is the player to encounter $$5$$ combats in a $$\mathcal{M}_1$$ map?  What if we only had $$4$$, or even $$3$$ combats in total before fighting a buffed Lagavulin?  Checking the first hundred billion seeds, I made a startling discovery: as many as $$~2\%$$ of all $$\mathcal{M}_1$$ maps had a maximum of $$3$$ combats before floor 6.  Altogether, this new constraint $$\mathcal{M}_2$$ was satisfied by roughly 1 in every $$\sim 9.17$$ million seeds, sampled from the first $$100$$ billion seeds.  
 
 By relaxing the card constraints from $$5$$ rewards to $$3$$, the CUDA code returned a batch of $$\sim 234$$ million seeds from among the first $$\sim 6.6$$ quadrillion seeds after roughly $$16$$ hours.  
