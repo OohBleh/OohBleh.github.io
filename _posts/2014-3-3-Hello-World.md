@@ -137,7 +137,11 @@ $$
 	141
 $$
 {: refdef}
-damage.  
+damage to Lagavulin.  Since Lagavulin's HP exceeds 141, the run is unwinnable in this case.  
 
 ### Case 2: No boss relic swap and Outmaneuver is taken
+{:refdef: style="text-align: center;"}
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/no-energy-unlimited-draw.png)
+{: refdef}
+
 ### Case 3: Swap Ring of the Snake for Cursed Key
