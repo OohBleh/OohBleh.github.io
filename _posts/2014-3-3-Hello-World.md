@@ -3,7 +3,6 @@ layout: post
 title: An extremely unwinnable Slay the Spire seed
 published: true
 ---
-date: July 3, 2016
 
 ## Overview
 In this post, I will describe how [gamerpuppy](https://github.com/gamerpuppy) and I found an unwinnable Slay the Spire seed along with a simple proof of unwinnability.  This project is motivated by ForgottenArbiter's success at finding a (probably, but still requiring full combat simulation) unwinnable seed.  Our goal was to find a seed for which it can be proven unwinnable without simulating combat, and without checking too many cases.  
