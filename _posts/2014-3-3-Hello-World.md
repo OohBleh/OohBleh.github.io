@@ -42,7 +42,6 @@ As an integer, this seed is 3,431,382,150,268,629 or ~3.4 quadrillion, but we ma
 
 For now, we will outline the computational effort that led to its discovery.  Scroll down further to see the proof of unwinnability.  
 
-
 ### BCE (Before CUDA Era)
 I first got involved in this search in early January not long after finding and routing an [Ascension 20 Heart snipe seed](https://youtu.be/8jHTNGrreTw).  I had accomplished (with glitches and some very careful RNG manipulation) the first turn-1 Heart kill since the boot bug exploited [here](https://youtu.be/4knfPJyKLYY) by ForgottenArbiter was patched.  For it, I used [gamerpuppy's sts_seed_search](https://github.com/gamerpuppy/sts_seed_search), which emulates essential seed searching functions at a low level.  With this approach, I am able to specify which calculations I want to make and can evaluate the results quickly.  For speedrun-related searches in the past, I have predominantly used ForgottenArbiter's [SeedSearch](https://github.com/ForgottenArbiter/SeedSearch) mod, which runs through the backend of the base game and comes with an easy to use list of seed criteria.  
 
