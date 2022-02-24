@@ -57,6 +57,8 @@ While I believe this seed is unwinnable due to the damage that must be taken to 
 
 wow wee, here's a picture
 ![bad silent cards didn't load oof]({{site.baseurl}}/_posts/bad-silent-cards.png)
+what is happening
+
 ![bad silent cards didn't load oof](bad-silent-cards.png)
 
 great job
