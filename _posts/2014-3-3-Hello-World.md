@@ -41,15 +41,10 @@ I began my search on sts_seed_search with a variety of different search paramete
 
 
 Adjusting my search parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which has the following properties: 
-    Small Slimes        Deflect Prepared Outmaneuver 
-    Jaw Worm        Outmaneuver Dodge and Roll Blur 
-    Cultist        Backflip Concentrate Dodge and Roll 
-    Large Slime        Concentrate Burst Backflip 
-    Exordium Thugs        Piercing Wail Slice Blade Dance
-1 skill potion from 5th combat -- only gives Calc. Gamble, Tactician, and Setup. 
-Only way to get any damage card is by fighting 5 combats and taking the Blade Dance or Slice. 
-Events: Winged Statue (-7 HP for removal), Scrap Ooze (5 or 6 hits for Tea Set), Wheel Gremlin (only gives 1 removal), and combat. 
-Neow also offers 1 removal, 100g, and 250g for lost max HP.
+1. Neow also offers 1 removal, 100g, and 250g for lost max HP.
+2. card rewards: {Deflect, Prepared, Outmaneuver}, {Outmaneuver, Dodge and Roll, Blur}, {Backflip, Concentrate, Dodge and Roll}, {Concentrate, Burst, Backflip}, {Piercing Wail, Slice, Blade Dance}
+3. 1 skill potion from 5th combat -- can only give gives Calculated Gamble, Tactician, or Setup. 
+4. Events: Winged Statue (-7 HP for 1 removal), Scrap Ooze (5 or 6 hits for Tea Set), Wheel Gremlin (always gives 1 removal), and combat. 
 
 While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  
 
