@@ -50,7 +50,7 @@ $$
     = t_1 + p_1t_2.  
 $$
 {: refdef}
-Reversing the order exchanges the indices 1 and 2.  In order to minimize the average time spent testing seeds, it follows that the correct filter order satisfies the inequality: 
+Reversing the order exchanges the indices 1 and 2.  In order to minimize the average time spent testing each seed, it follows that the correct filter order satisfies the inequality: 
 $$
 	\dfrac{t_1}{1-p_1}\geq \dfrac{t_2}{1-p_2}.  
 $$
