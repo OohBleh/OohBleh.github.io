@@ -119,14 +119,25 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 1.  Neow offers 1 card removal, gold, or a boss swap into Cursed Key.  
 2.  Before floor 6, the only ?-node outcomes are Scrap Ooze, Golden Idol, and The Cleric, in this order.  
 3.  The first 3 combats rewards before Lagavulin are: 
-
     - 0 or 1 card from {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
     - 0 or 1 card from {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
     - 0 or 1 card from {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
-
 4.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
 5.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
 
 ### Case 1: No boss relic swap and Outmaneuver is skipped
+In this case, the maximum damage done on any given turn is attained by playing 3 copies of Strike and Neutralize.  The player may deal damage on at most 4 turns with a strength of 0, 3 with a strength of -2, and 3 with a strength of -4.  Before Lagavulin applies the 3rd debuff, the player can deal at most 
+
+{:refdef: style="text-align: center;"}
+$$
+	\overbrace{4\cdot (3\cdot 6 + 3)}^{\text{str. } =\; 0} + 
+	\overbrace{3\cdot (3\cdot 4 + 1)}^{\text{str. } =\; -2} + 
+	\overbrace{3\cdot (3\cdot 2 + 0)}^{\text{str. } =\; -4} = 
+	84 + 39 + 18 = 
+	141
+$$
+{: refdef}
+damage.  
+
 ### Case 2: No boss relic swap and Outmaneuver is taken
 ### Case 3: Swap Ring of the Snake for Cursed Key
