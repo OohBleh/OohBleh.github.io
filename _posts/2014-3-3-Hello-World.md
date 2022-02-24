@@ -88,7 +88,7 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 
 While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  
 
-It became clear to me that in order to find a suitable seed, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only 1 in $$~15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand ($$\mathcal{M}*$$), only 1 in every $$~225,000$$ seeds passes through.  
+It became clear to me that in order to find a suitable seed, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only 1 in $$~15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand ($$\mathcal{M}^*$$), only 1 in every $$~225,000$$ seeds passes through.  
 
 After 10 trillions seeds searched, it was time for a new approach.  
 
@@ -104,7 +104,8 @@ To understand the strength of the card reward filter, consider the following set
 
 With the exception of Distraction, which has a _chance_ to be helpful against Lagavulin, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as 1/100.  With 5 card rewards potentially possible before floor 6, roughly 1 in every 10 billion seeds will have 5 consecutive bad card rewards.  On a modern GPU, dozens of seeds pass both filters each second.  Even then, not enough seeds were passing through the remaining filters.  
 
-### 
+### An unimagineably unfair map
 
+To make the final breakthrough, I pressed harder on my combat constraints.  How likely is the player to encounter 5 combats in a $$\mathcal{M}^*$$ map?  What if we only had $$4$$, or even $$3$$ combats in total before fighting a buffed Lagavulin?  Checking the first hundred billion seeds, I made a startling discovery: as many as $$~2\%$$ of all $$\mathcal{M}^*$$ maps had a maximum of $$3$$ combats before floor 6.  Altogether, this new constraint $$\mathcal{M}^{**}$$ was satisfied by roughly 1 in every 9.17 million seeds, sampled from the first 100 billion seeds.  
 
-In fact, laziness is built into the code that found this seed.  Enhancing the approach by
+By relaxing the card constraints from $$5$$ rewards to $$3$$, the CUDA code 
