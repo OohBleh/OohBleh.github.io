@@ -72,8 +72,8 @@ $$
 With this heuristic in mind, it becomes strikingly clear that the optimal filter order is: 
 
 1. $$\mathcal{N}:$$ the floor 0 rewards from Neow are "bad".  
-2. $$\mathcal{C}(3):$$ the first 5 card rewards do not adequately augment Silent's damage output.  
-3. $$\mathcal{P}(3):$$ the potions offered from the first 5 combats also do not augment damage output.  
+2. $$\mathcal{C}(5):$$ the first 5 card rewards do not adequately augment Silent's damage output.  
+3. $$\mathcal{P}(5):$$ the potions offered from the first 5 combats also do not augment damage output.  
 4. $$\mathcal{E}:$$ Lagavulin is the first elite fought.  
 5. $$\mathcal{M}:$$ no shops or rest sites appear before floor 6, and floor 6 only has elite fights.  
 
@@ -85,7 +85,7 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 4. $$\mathcal{E}$$ and $$\mathcal{M}$$ met, and one of the floor 6 elites is the "burning" elite.  
 4. Events: Winged Statue (-7 HP for 1 removal), Scrap Ooze (5 or 6 hits for Tea Set), Wheel Gremlin (always gives 1 removal), and combat. 
 
-While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  
+While I am optimistic that this seed is unwinnable due to the damage that must be taken to survive the 5th combat, proving it would require fully simulating several combats.  
 
 It became clear to me that in order to find a suitable seed, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only 1 in $$~15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand ($$\mathcal{B}$$), only 1 in every $$~225,000$$ seeds passes through.  
 
@@ -107,4 +107,4 @@ With the exception of Distraction, which has a _chance_ to be helpful against La
 
 To make the final breakthrough, I pressed harder on my combat constraints.  How likely is the player to encounter $$5$$ combats in a $$\mathcal{B}$$ map?  What if we only had 4, or even 3 combats in total before fighting a buffed Lagavulin?  Checking the first 100 billion seeds, I made a startling discovery: as many as $$~2\%$$ of all $$\mathcal{B}$$ maps had a maximum of 3 combats before floor 6.  Altogether, this new constraint $$\mathcal{B}(3)$$ was satisfied by roughly 1 in every 9.17 million seeds, according to the sample.  
 
-By relaxing the card constraints from 5 rewards to 3, the CUDA code returned a batch of about 234 million seeds from among the first 6.6 quadrillion seeds, after running for roughly 16 hours.  Four seeds MC81APL0TK, UL8LMGQV64, 1778H44QQQP, 18ISL35FYK4 emerged after being tested against properties $$\mathcal{N}, \mathcal{C}(3), \mathcal{P}(3), \mathcal{E}, $ and $\mathcal{B}$,  with only the last one having a suitably unhelpul boss relic swap and event pool.  
+By relaxing the card constraints from 5 rewards to 3, the CUDA code returned a batch of about 234 million seeds from among the first 6.6 quadrillion seeds, after running for roughly 16 hours.  Four seeds MC81APL0TK, UL8LMGQV64, 1778H44QQQP, 18ISL35FYK4 emerged after being tested against properties $$\mathcal{N}, \mathcal{C}(3), \mathcal{P}(3), \mathcal{E}, $ and $\mathcal{B}(3)$,  with only the last one having a suitably unhelpul boss relic swap and event pool.  
