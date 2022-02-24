@@ -88,13 +88,13 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 
 While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  
 
-It became clear to me that in order to find a suitable seed, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only 1 in $$~15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand ($$\mathcal{M}^*$$), only 1 in every $$~225,000$$ seeds passes through.  
+It became clear to me that in order to find a suitable seed, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only 1 in $$~15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand ($$\mathcal{B}$$), only 1 in every $$~225,000$$ seeds passes through.  
 
 After 10 trillions seeds searched, it was time for a new approach.  
 
 ### the GPU seed farm
 
-After several helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational, allowing for simultaneous computation with tens of thousands of [threads](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)).  To optimize performance, we feed in the most efficient constraints into CUDA: $\mathcal{N}$ and $\mathcal{C}$.  Any seeds that pass these filters get save to a text file which can later be fed through the C++ program for further analysis.  
+After several helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational, allowing for simultaneous computation with tens of thousands of [threads](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)).  To optimize performance, we feed in the most efficient constraints into CUDA: $$\mathcal{N}$$ and $$\mathcal{C}$$.  Any seeds that pass these filters get save to a text file which can later be fed through the C++ program for further analysis.  
 
 To understand the strength of the card reward filter, consider the following set of "unhelpful" Silent cards: 
 
@@ -106,6 +106,6 @@ With the exception of Distraction, which has a _chance_ to be helpful against La
 
 ### An unimagineably unfair map
 
-To make the final breakthrough, I pressed harder on my combat constraints.  How likely is the player to encounter $$5$$ combats in a $$\mathcal{M}_1$$ map?  What if we only had 4, or even 3 combats in total before fighting a buffed Lagavulin?  Checking the first 100 billion seeds, I made a startling discovery: as many as $$~2\%$$ of all $$\mathcal{M}_1$$ maps had a maximum of 3 combats before floor 6.  Altogether, this new constraint $$\mathcal{M}_2$$ was satisfied by roughly 1 in every 9.17 million seeds, according to the sample.  
+To make the final breakthrough, I pressed harder on my combat constraints.  How likely is the player to encounter $$5$$ combats in a $$\mathcal{B}$$ map?  What if we only had 4, or even 3 combats in total before fighting a buffed Lagavulin?  Checking the first 100 billion seeds, I made a startling discovery: as many as $$~2\%$$ of all $$\mathcal{B}$$ maps had a maximum of 3 combats before floor 6.  Altogether, this new constraint $$\mathcal{B}(3)$$ was satisfied by roughly 1 in every 9.17 million seeds, according to the sample.  
 
 By relaxing the card constraints from 5 rewards to 3, the CUDA code returned a batch of about 234 million seeds from among the first 6.6 quadrillion seeds, after running for roughly 16 hours.  
