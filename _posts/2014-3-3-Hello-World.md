@@ -99,7 +99,7 @@ After several helpful conversations with gamerpuppy, they sent me a version of t
 To understand the strength of the card reward filter, consider the following set of "unhelpful" Silent cards: 
 
 {:refdef: style="text-align: center;"}
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="660px" width="709px"}
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="528px" width="567px"}
 {: refdef}
 
 With the exception of Distraction, which has a _chance_ to be helpful against Lagavulin, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as 1/100.  With 5 card rewards potentially possible before floor 6, roughly 1 in every 10 billion seeds will have 5 consecutive bad card rewards.  On a modern GPU, dozens of seeds pass both filters each second.  Even then, not enough seeds were passing through the remaining filters.  
