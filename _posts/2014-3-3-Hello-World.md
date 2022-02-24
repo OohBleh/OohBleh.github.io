@@ -58,10 +58,10 @@ $$
 With this heuristic in mind, it becomes strikingly clear that the optimal filter order is: 
 
 1. $$\mathcal{N}:$$ the floor 0 rewards from Neow are "bad".  
-2. $$\mathcal{C}:$$ the card rewards do not adequately augment Silent's damage output
-3. $$\mathcal{P}:$$ the potions offered also do not augment damage output
-4. $$\mathcal{E}:$$ Lagavulin is the first elite fought
-5. $$\mathcal{M}:$$ no shops or rest sites appear before floor 6, and floor 6 only has elite fights
+2. $$\mathcal{C}:$$ the card rewards do not adequately augment Silent's damage output.  
+3. $$\mathcal{P}:$$ the potions offered also do not augment damage output.  
+4. $$\mathcal{E}:$$ Lagavulin is the first elite fought.  
+5. $$\mathcal{M}:$$ no shops or rest sites appear before floor 6, and floor 6 only has elite fights.  
 
 
 Adjusting my search parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which has the following properties: 
