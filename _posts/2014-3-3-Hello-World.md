@@ -64,7 +64,9 @@ Reversing the order exchanges the indices 1 and 2.  In order to minimize the ave
 
 {:refdef: style="text-align: center;"}
 $$
-	\dfrac{t_1}{1-p_1}\geq \dfrac{t_2}{1-p_2}.  
+	~\\
+    \\
+    \dfrac{t_1}{1-p_1}\geq \dfrac{t_2}{1-p_2}.  
 $$
 {: refdef}
 
