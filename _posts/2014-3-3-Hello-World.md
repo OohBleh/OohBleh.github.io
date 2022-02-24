@@ -112,7 +112,7 @@ Finally, we are prepared to prove this seed is unwinnable.
 
 ## Proof of unwinnability
 
-Let $$\mathcal{BS} := 18ISL35FYK4 (\text{also, 3,431,382,150,268,629})$$.  We list some useful facts about this seed.  
+Let $$\mathcal{BS} := 3,431,382,150,268,629 (\text{also, 18ISL35FYK4})$$.  We list some useful facts about this seed.  
 
 **Fact A** As Silent on Ascension 18 or higher with, a normal run with seed $$\mathcal{BS}$$ manually entered has the following properties.  
 
