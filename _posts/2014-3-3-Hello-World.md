@@ -61,7 +61,7 @@ what is happening
 
 ![bad silent cards didn't load oof](bad-silent-cards.png)
 
-great job
+great job, hey notice this change
 
 After limited success with sts_seed_search and many helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](asdf).  In short, CUDA can be used to 
 
