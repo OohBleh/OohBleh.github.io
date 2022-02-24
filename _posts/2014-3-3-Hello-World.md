@@ -82,7 +82,7 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 1. $$\mathcal{N}$$: 1 removal, 100g, and 250g for max HP, or swap into Black Star.  
 2. $$\mathcal{C}(5)$$: {Deflect, Prepared, Outmaneuver}, {Outmaneuver, Dodge and Roll, Blur}, {Backflip, Concentrate, Dodge and Roll}, {Concentrate, Burst, Backflip}, {Piercing Wail, Slice, Blade Dance}
 3. $$\mathcal{P}(5)$$: 1 skill potion from 5th combat (only gives Calculated Gamble, Tactician, or Setup). 
-4. $$\mathcal{E}$$ and $$\mathcal{M}$$ met, and one of the floor 6 elites is the "burning" elite.  
+4. $$\mathcal{E}$$ and $$\mathcal{M}$$ are met, and one of the floor 6 elites is the "burning" elite.  
 4. Events: Winged Statue (-7 HP for 1 removal), Scrap Ooze (5 or 6 hits for Tea Set), Wheel Gremlin (always gives 1 removal), and combat. 
 
 While I am optimistic that this seed is unwinnable due to the damage that must be taken to survive the 5th combat, proving it would require fully simulating several combats.  
