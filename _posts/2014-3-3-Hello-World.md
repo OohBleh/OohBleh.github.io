@@ -125,6 +125,4 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 
 For the sake of contradiction, suppose $$\mathcal{BS}$$ is winnable.  It follows form Fact A that the following holds.  There exists a deck $$\mathcal{D}$$ and a relic $$R$$, where $R$ is either Ring of the Snake or Cursed Key, such that (1) the player can reach floor 6 with deck $$\mathcal{D}$$ and unique relic $$R$$, and (2) if given control over all deck shuffles and unlimited HP, then with deck $$\mathcal{D}$$, unique relic $$R$$, and no other resources, the player can defeat a 145-HP Lagavulin before the 3rd turn of debuffs is applied.  
 
-Fix some $$\mathcal{D}$$ and $$R$$ be as above.  We make some useful definitions.  
-- Let $$d = |\mathcal{D}|$$ and let $$r$$ be the number of copies of Escape Plans or Prepared cards in $$\mathcal{D}$$.  
-- 
+Fix some $$\mathcal{D}$$ and $$R$$ be as above.  We make some useful definitions. Let $$d = |\mathcal{D}|$$ and let $$k$$ be the number of copies of Escape Plans or Prepared cards in $$\mathcal{D}$$.  
