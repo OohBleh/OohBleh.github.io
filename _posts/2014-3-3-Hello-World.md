@@ -113,9 +113,7 @@ Finally, we are prepared to prove this seed is unwinnable.
 
 ## Proof of unwinnability
 
-Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  For the sake of contradiction, suppose $$\mathcal{BS}$$ is winnable.  It follows that there exists a deck $$\mathcal{D}$$ and a relic $$R$$, where $R$ is either Ring of the Snake or Cursed Key such that (1) the player can reach floor 6 with deck $$\mathcal{D}$$ and unique relic $$R$$, and (2) if given control over all deck shuffles, the player can defeat 145-HP Lagavulin with deck $$\mathcal{D}$$ and unique relic $$R$$.  
-
-We list some useful facts about this seed.  
+Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We list some useful facts about this seed.  
 
 **Fact A**. As Silent on Ascension 18 or higher with, a normal run with seed $$\mathcal{BS}$$ manually entered has the following properties.  
 1.  Neow offers 1 card removal, gold, or a boss swap into Cursed Key.  
@@ -124,3 +122,9 @@ We list some useful facts about this seed.
 4.  The only draw cards offered are Escape Plan and Prepared.  
 5.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
 6.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
+
+For the sake of contradiction, suppose $$\mathcal{BS}$$ is winnable.  It follows form Fact A that the following holds.  There exists a deck $$\mathcal{D}$$ and a relic $$R$$, where $R$ is either Ring of the Snake or Cursed Key, such that (1) the player can reach floor 6 with deck $$\mathcal{D}$$ and unique relic $$R$$, and (2) if given control over all deck shuffles, the player can defeat 145-HP Lagavulin with deck $$\mathcal{D}$$ and unique relic $$R$$.  
+
+Fix some $$\mathcal{D}$$ and $$R$$ be as above.  We make some useful definitions.  
+- Let $$d := |\mathcal{D}|$$ abd let $$r$$ be the number of copies of Escape Plans or Prepared cards in $$\mathcal{D}$$.  
+- 
