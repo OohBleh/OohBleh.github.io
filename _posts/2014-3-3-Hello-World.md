@@ -73,8 +73,8 @@ $$
 With this heuristic in mind, it becomes strikingly clear that the optimal filter order is: 
 
 1. $$\mathcal{N}:$$ the floor 0 rewards from Neow are "bad".  
-2. $$\mathcal{C}:$$ the card rewards do not adequately augment Silent's damage output.  
-3. $$\mathcal{P}:$$ the potions offered also do not augment damage output.  
+2. $$\mathcal{C}(3):$$ the first 5 card rewards do not adequately augment Silent's damage output.  
+3. $$\mathcal{P}(3):$$ the potions offered from the first 5 combats also do not augment damage output.  
 4. $$\mathcal{E}:$$ Lagavulin is the first elite fought.  
 5. $$\mathcal{M}:$$ no shops or rest sites appear before floor 6, and floor 6 only has elite fights.  
 
