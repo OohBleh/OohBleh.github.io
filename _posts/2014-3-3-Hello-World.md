@@ -63,11 +63,12 @@ With this heuristic in mind, it becomes strikingly clear that the optimal filter
 4. $$\mathcal{E}:$$ Lagavulin is the first elite fought.  
 5. $$\mathcal{M}:$$ no shops or rest sites appear before floor 6, and floor 6 only has elite fights.  
 
+For other considerations such as ?-nodes outcomes and boss relic swaps, we print out some information on each seed that passes filters 1 through 5, and test everything else manually.  Adjusting my search parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which meets the above properties.  More precisely: 
 
-Adjusting my search parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which has the following properties: 
-1. Neow also offers 1 removal, 100g, and 250g for lost max HP.
-2. card rewards: {Deflect, Prepared, Outmaneuver}, {Outmaneuver, Dodge and Roll, Blur}, {Backflip, Concentrate, Dodge and Roll}, {Concentrate, Burst, Backflip}, {Piercing Wail, Slice, Blade Dance}
-3. 1 skill potion from 5th combat -- can only give gives Calculated Gamble, Tactician, or Setup. 
+1. Neow also offers 1 removal, 100g, and 250g for lost max HP, and a swap into Black Star.  
+2. Card rewards: {Deflect, Prepared, Outmaneuver}, {Outmaneuver, Dodge and Roll, Blur}, {Backflip, Concentrate, Dodge and Roll}, {Concentrate, Burst, Backflip}, {Piercing Wail, Slice, Blade Dance}
+3. 1 skill potion from 5th combat which can only give gives Calculated Gamble, Tactician, or Setup. 
+4. property $$\mathcal{M}$$ is met and one of the floor 6 elites is the "burning" elite.  
 4. Events: Winged Statue (-7 HP for 1 removal), Scrap Ooze (5 or 6 hits for Tea Set), Wheel Gremlin (always gives 1 removal), and combat. 
 
 While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  
