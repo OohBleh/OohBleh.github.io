@@ -118,11 +118,13 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 **Fact A**. As Silent on Ascension 18 or higher with, a normal run with seed $$\mathcal{BS}$$ manually entered has the following properties.  
 1.  Neow offers 1 card removal, gold, or a boss swap into Cursed Key.  
 2.  Before floor 6, the only ?-node outcomes are Scrap Ooze, Golden Idol, and The Cleric, in this order.  
-3.  The first 3 combats offer no damage cards, no Distractions, and no potions.  
-4.  The only draw cards offered are Escape Plan and Prepared.  
-5.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
-6.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
+3.  The first 3 combats rewards before Lagavulin are: 
+-- 0 or 1 card from {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
+-- 0 or 1 card from {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
+-- 0 or 1 card from {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
+4.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
+5.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
 
-For the sake of contradiction, suppose $$\mathcal{BS}$$ is winnable.  It follows form Fact A that the following holds.  There exists a deck $$\mathcal{D}$$ and a relic $$R$$, where $R$ is either Ring of the Snake or Cursed Key, such that (1) the player can reach floor 6 with deck $$\mathcal{D}$$ and unique relic $$R$$, and (2) if given control over all deck shuffles and unlimited HP, then with deck $$\mathcal{D}$$, unique relic $$R$$, and no other resources, the player can defeat a 145-HP Lagavulin before the 3rd turn of debuffs is applied.  
-
-Fix some $$\mathcal{D}$$ and $$R$$ be as above.  We make some useful definitions. Let $$d = |\mathcal{D}|$$, let $$k$$ be the number of copies of Escape Plans or Prepared cards in $$\mathcal{D}$$, and let $$r$$ be the number of Silent starter cards missing from $$\mathcal{D}$$.  
+### Case 1: $$R = $$ Ring of Snake and Outmaneuver is skipped
+### Case 2: $$R = $$ Ring of Snake and Outmaneuver is skipped
+### Case 3: $$R = $$ Cursed Key
