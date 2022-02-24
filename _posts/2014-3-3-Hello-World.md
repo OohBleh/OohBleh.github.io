@@ -53,11 +53,11 @@ While I believe this seed is unwinnable due to the damage that must be taken to 
 After limited success with sts_seed_search and many helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational, allowing for simultaneous computation with tens of thousands of threads.  
 
 {:refdef: style="text-align: center;"}
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="989px" width="1063px"}
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="791px" width="850px"}
 {: refdef}
 
 {:refdef: style="text-align: center;"}
-![bad map wow](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/heinous-map.png){:height="241px" width="304px"}
+![bad map wow](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/heinous-map.png){:height="433px" width="547px"}
 {: refdef}
 
 
