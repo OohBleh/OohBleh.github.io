@@ -112,12 +112,14 @@ Finally, we are prepared to prove this seed is unwinnable.
 
 ## Proof of unwinnability
 
-Let $$\mathcal{BS} := 18ISL35FYK4$ (\text{also, 3,431,382,150,268,629})$.  We list some useful facts about this seed.  
+Let $$\mathcal{BS} := 18ISL35FYK4 (\text{also, 3,431,382,150,268,629})$$.  We list some useful facts about this seed.  
 
 **Fact A** As Silent on Ascension 18 or higher with, a normal run with seed $$\mathcal{BS}$$ manually entered has the following properties.  
 
 1.  Neow offers: 1 card removal, gold, or a boss swap into Cursed Key.  
-2.  Before floor 6, only the events Scrap Ooze, Golden Idol, and The Cleric can be encountered, in this order.  
+2.  Before floor 6, the only ?-node outcomes are Scrap Ooze, Golden Idol, and The Cleric, in this order.  
 3.  The first 3 combats offer no damage cards, no Distractions, and no potions.  
 4.  The only draw cards offered are Escape Plan and Prepared.  
+5.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
+
 
