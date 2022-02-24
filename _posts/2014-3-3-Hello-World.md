@@ -106,4 +106,16 @@ With the exception of Distraction, which has a _chance_ to be helpful against La
 
 To make the final breakthrough, I pressed harder on my combat constraints.  How likely is the player to encounter $$5$$ combats in a $$\mathcal{B}$$ map?  What if we only had 4, or even 3 combats in total before fighting a buffed Lagavulin?  Checking the first 100 billion seeds, I made a startling discovery: more than $$~2\%$$ of all $$\mathcal{B}$$ maps had a maximum of 3 combats before floor 6.  Altogether, this new constraint $$\mathcal{B}(3)$$ was satisfied by roughly 1 in every 9.17 million seeds, according to the sample.  
 
-By relaxing the card constraints from 5 rewards to 3, the CUDA code returned a batch of about 234 million seeds from among the first 6.6 quadrillion seeds, after running for roughly 16 hours.  Four seeds MC81APL0TK, UL8LMGQV64, 1778H44QQQP, 18ISL35FYK4 emerged after being tested against properties $$\mathcal{N}, \mathcal{C}(3), \mathcal{P}(3), \mathcal{E}, $$ and $$\mathcal{B}(3)$,  with only the last one having a suitably unhelpul boss relic swap and event pool.  
+By relaxing the card constraints from 5 rewards to 3, the CUDA code returned a batch of about 234 million seeds from among the first 6.6 quadrillion seeds, after running for roughly 16 hours.  Four seeds MC81APL0TK, UL8LMGQV64, 1778H44QQQP, 18ISL35FYK4 emerged after being tested against properties $$\mathcal{N}, \mathcal{C}(3), \mathcal{P}(3), \mathcal{E}, $$ and $$\mathcal{B}(3)$$,  with only the last one having a suitably unhelpul boss relic swap and event pool.  
+
+Finally, we are prepared to prove this seed is unwinnable.  
+
+## Proof of unwinnability
+
+Let $$\mathcal{BS} := 18ISL35FYK4$ (\text{also, 3,431,382,150,268,629})$.  We list some useful facts about this seed.  
+
+**Fact A** As Silent on Ascension 18 or higher with, a normal run on seed $$\mathcal{BS}$$ has the following properties.  
+
+1.  
+2.  
+3. 
