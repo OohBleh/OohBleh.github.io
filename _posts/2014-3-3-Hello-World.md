@@ -48,6 +48,7 @@ I first got involved in this search in early January not long after finding and 
 I began my search on sts_seed_search with a variety of different search parameters.  Like Arbiter, I prioritized Neow bonuses, card rewards, and potions first since they are relatively fast to calculate and filter seeds efficiently.  I filtered based on the floor-0 rewards from Neow rewards of 5 (or sometimes 4) combats, assuming they were possible before the fight, and only filtered for maps with a forced floor 6 elite and no shops or rest sites beforehand.  I also filtered for "bad" potions in the first 5 (or 4) combats.  By this point, it was clear that the order of these filters mattered.  For example, generating the Act I map takes dozens of calls to random number generators, including many floating point calculations, whereas checking 5 card rewards for only "bad" cards costs, on average, fewer than 2 RNG calls.  
 
 Suppose we have two independent filters $$\mathcal{F}_1,\mathcal{F}_2$$ and consider the process of passing seeds uniformly at random though each.  If $$t_1,t_2$$ are good estimates for the times spend testing a seed against the filters, and $$p_1,p_2$$ are the probabilities of a seed passing the filters, then the expected time to test a seed against $$\mathcal{F_1}$$, and then $$\mathcal{F}_2$$ is 
+
 {:refdef: style="text-align: center;"}
 $$
 	\mathbb{E}[
@@ -60,6 +61,7 @@ $$
 {: refdef}
 
 Reversing the order exchanges the indices 1 and 2.  In order to minimize the average time spent testing each seed, it follows that the correct filter order satisfies the inequality: 
+
 {:refdef: style="text-align: center;"}
 $$
 	\dfrac{t_1}{1-p_1}\geq \dfrac{t_2}{1-p_2}.  
@@ -82,17 +84,19 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 4. property $$\mathcal{M}$$ is met and one of the floor 6 elites is the "burning" elite.  
 4. Events: Winged Statue (-7 HP for 1 removal), Scrap Ooze (5 or 6 hits for Tea Set), Wheel Gremlin (always gives 1 removal), and combat. 
 
-While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  
+While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  After 10 trillions seeds searched, it was time for a new approach.  
 
-### the GPU seed farm!
+### the GPU seed farm
 
-After limited success with sts_seed_search and many helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational, allowing for simultaneous computation with tens of thousands of [threads](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)).  To optimize performance, we feed in the most efficient constraints into CUDA: Neow offerings and card rewards.  To generate a seed's 
+After several helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational, allowing for simultaneous computation with tens of thousands of [threads](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)).  To optimize performance, we feed in the most efficient constraints into CUDA: $$\mathcal{N}$$ and $$\mathcal{C}$$.  Any seeds that pass these filters get save to a text file which can later be fed through the C++ program for further analysis.  
+
+To understand the strength of the card reward filter, consider the following set of "unhelpful" Silent cards: 
 
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="660px" width="709px"}
 {: refdef}
 
-
+With the exception of Distraction, which has a _chance_ to be helpful against Lagavulin, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set is $1/100$.  
 
 
 In fact, laziness is built into the code that found this seed.  Enhancing the approach by
