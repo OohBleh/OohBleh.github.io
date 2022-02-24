@@ -9,7 +9,7 @@ In this post, I will describe how [gamerpuppy](https://github.com/gamerpuppy) an
 
 ## Previous progress
 
-In a blog post on [unwinnable seeds in _Slay the Spire_](https://forgottenarbiter.github.io/Is-Every-Seed-Winnable/), ForgottenArbiter outlined a detailed approach to the problem of finding an unwinnable seed.  They take _unwinnable_ to describe any run of _Slay the Spire_ that cannot be won by any sequence of decisions allowed by the base game (ignoring glitches).  Since the random number generation of _Spire_ is determined uniquely by the run seed, the player can replay a seed repeatedly, playing cards in slightly different orders, to maintain health and eventually win the run, even if the individual decisions made are unintuitive. 
+In a blog post on [unwinnable seeds in _Slay the Spire_](https://forgottenarbiter.github.io/Is-Every-Seed-Winnable/), ForgottenArbiter outlined a detailed approach to the problem of finding an unwinnable seed.  We take _unwinnable_ to describe any run of _Slay the Spire_ that cannot be won by any sequence of decisions allowed by the base game (ignoring glitches).  Since the random number generation of _Spire_ is determined uniquely by the run seed, the player can replay a seed repeatedly, playing cards in slightly different orders, to maintain health and eventually win the run, even if the individual decisions made are unintuitive. 
 
 By analyzing card the optimal cases of card draw and deck shuffling, Arbiter proved that Silent's starting deck loses against Lagavulin on Ascension 18+, even with perfect card play and deck shuffling.  The argument completely ignores damage dealt to the player and focuses entirely on the lose condition: after 3 of Lagavulin's debuff turns (-2 dexterity and -2 strength), the player can no longer deal damage.  If the player reaches a fight against Lagavulin without improving the damage of their starter deck, they lose the run.  With this in mind, he formulated the following criteria when searching for unwinnable seeds.  
 
@@ -47,29 +47,28 @@ I first got involved in this search in early January not long after finding and 
 
 I began my search on sts_seed_search with a variety of different search parameters.  Like Arbiter, I prioritized Neow bonuses, card rewards, and potions first since they are relatively fast to calculate and filter seeds efficiently.  I filtered based on the floor-0 rewards from Neow rewards of 5 (or sometimes 4) combats, assuming they were possible before the fight, and only filtered for maps with a forced floor 6 elite and no shops or rest sites beforehand.  I also filtered for "bad" potions in the first 5 (or 4) combats.  By this point, it was clear that the order of these filters mattered.  For example, generating the Act I map takes dozens of calls to random number generators, including many floating point calculations, whereas checking 5 card rewards for only "bad" cards costs, on average, fewer than 2 RNG calls.  
 
-Suppose we have two independent filters $$\mathcal{F}_1,\mathcal{F}_2$$ and consider the process of passing seeds uniformly at random though each.  If $$t_1,t_2$$ are good estimates for the times spend testing a seed against the filters, and $$p_1,p_2$$ are the probabilities of a seed passing the filters, then the expected time to test a seed against $$\mathcal{F_1}$$, and then $$\mathcal{F}_2$$ is 
+Suppose we have two independent filters $$\mathcal{F},\mathcal{G}$$ and consider the process of passing seeds uniformly at random though each.  If $$s,t$$ are good estimates for the times spend testing a seed against the filters, and $$p,q$$ are the probabilities of a seed passing the filters, then the expected time to test a seed against $$\mathcal{F}$$, and then $$\mathcal{G}$$ is 
 
 {:refdef: style="text-align: center;"}
 $$
 	\mathbb{E}[
     	\text{time spend testing a seed} | 
-        \text{ testing } \mathcal{F}_1
-        \text{ then } \mathcal{F}_2
+        \text{ testing } \mathcal{F}
+        \text{ then } \mathcal{G}
     ]
-    = t_1 + p_1t_2.  
+    = s + pt.  
 $$
 {: refdef}
 
-Reversing the order exchanges the indices 1 and 2.  In order to minimize the average time spent testing each seed, it follows that the correct filter order satisfies the inequality: 
+Reversing the filter order exchanges $$s,t$$ and $$p,q$$.  In order to minimize the average time spent testing each seed, it follows that the correct filter order satisfies the inequality: 
 
 {:refdef: style="text-align: center;"}
 $$
-	~\\
-    \dfrac{t_1}{1-p_1}\geq \dfrac{t_2}{1-p_2}.  
+    \dfrac{s}{1-p}\geq \dfrac{t}{1-q}.  
 $$
 {: refdef}
 
-With this heuristic in mind, it becomes strikingly clear that the optimal filter order is: 
+The left-hand side can be thought of as a measure of the _efficiency_ of the filter $$\mathcal{F}$$: how well does it use a resource (time) to reject an unsuitable seed?  With this heuristic in mind, it becomes strikingly clear that the optimal filter order is: 
 
 1. $$\mathcal{N}:$$ the floor 0 rewards from Neow are "bad".  
 2. $$\mathcal{C}(5):$$ the first 5 card rewards do not adequately augment Silent's damage output.  
