@@ -26,13 +26,22 @@ The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has
 Unfortunately, due to the added card draw, there are decks that can be drafted by floor 6 that, with perfect shuffle RNG, can survive the fight.  For example, with a deck of blah, the following sequence of cards played can survive the fight, if realizable: blah.  The seed is believed by many to be unwinnable, but proving it would likely require simulating the fight with Lagavulin and checking all sequences of card plays for optimal shuffle manipulation.  
 
 ## The hunt for an abomination: 18ISL35FYK4
-picture of the map
+
+The goal of my search was to find a seed so heinous that the proof of unwinnability can fit on an index card (e.g., it requires no combat simulation).  
+
+{:refdef: style="text-align: center;"}
+![bad map wow](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/heinous-map.png){:height="433px" width="547px"}
+{: refdef}
+
 As an integer, this seed is 3,431,382,150,268,629 or ~3.4 quadrillion, but we make no claim that this is the first unwinnable seed.  This seed has the following properties: 
 
 1. Neow only offers 1 removal, 100 gold, 250 gold for some max HP, or a swap into Cursed Key.  
 2. The map forces a burning elite fight (max HP Lagavulin) on floor 6 with no shops or rest sites beforehand.  
 3. The player encounters either 2 or 3 combats beforehand and the events only give 1 removal.  
 4. The cards offered do not directly add any damage and are draw-neutral.  
+
+For now, we will outline the computational effort that led to its discovery.  Scroll down further to see the proof of unwinnability.  
+
 
 ### BCE (Before CUDA Era)
 I first got involved in this search in early January not long after finding and routing an [Ascension 20 Heart snipe seed](https://youtu.be/8jHTNGrreTw).  I had accomplished (with glitches and some very careful RNG manipulation) the first turn-1 Heart kill since the boot bug exploited [here](https://youtu.be/4knfPJyKLYY) by ForgottenArbiter was patched.  For it, I used [gamerpuppy's sts_seed_search](https://github.com/gamerpuppy/sts_seed_search), which emulates essential seed searching functions at a low level.  With this approach, I am able to specify which calculations I want to make and can evaluate the results quickly.  For speedrun-related searches in the past, I have predominantly used ForgottenArbiter's [SeedSearch](https://github.com/ForgottenArbiter/SeedSearch) mod, which runs through the backend of the base game and comes with an easy to use list of seed criteria.  
@@ -83,11 +92,6 @@ After limited success with sts_seed_search and many helpful conversations with g
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="660px" width="709px"}
 {: refdef}
-
-{:refdef: style="text-align: center;"}
-![bad map wow](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/heinous-map.png){:height="433px" width="547px"}
-{: refdef}
-
 
 
 
