@@ -33,11 +33,28 @@ As an integer, this seed is 3,431,382,150,268,629 or ~3.4 quadrillion, but we ma
 3. The player encounters either 2 or 3 combats beforehand and the events only give 1 removal.  
 4. The cards offered do not directly add any damage and are draw-neutral.  
 
+### BCE (Before CUDA Era)
 I first got involved in this search in early January not long after finding and routing an [Ascension 20 Heart snipe seed](https://youtu.be/8jHTNGrreTw).  I had accomplished (with glitches and some very careful RNG manipulation) the first turn-1 Heart kill since the boot bug exploited [here](https://youtu.be/4knfPJyKLYY) by ForgottenArbiter was patched.  For it, I used [gamerpuppy's sts_seed_search](https://github.com/gamerpuppy/sts_seed_search), which emulates essential seed searching functions at a low level.  For speedrun-related searches in the past, I have predominantly used ForgottenArbiter's [SeedSearch](https://github.com/ForgottenArbiter/SeedSearch) mod, which runs through the game and comes with an easy to use list of seed criteria.  
 
-I began my search on sts_seed_search with a variety of different search parameters.  Like Arbiter, I prioritized Neow bonuses, card rewards, and potions first since they are relatively fast to calculate and filter seeds efficiently.  
-After limited success with sts_seed_search and many helpful conversations with gamerpuppy's CUDA code they used for finding 
+I began my search on sts_seed_search with a variety of different search parameters.  Like Arbiter, I prioritized Neow bonuses, card rewards, and potions first since they are relatively fast to calculate and filter seeds efficiently.  I filtered based on the rewards of 5 (or sometimes 4) combats, assuming they were possible before the fight, and only filtered for maps with a forced floor 6 elite and no shops or rest sites beforehand.  
+
+
+Adjusting my search parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which has the following properties: 
+    Small Slimes        Deflect Prepared Outmaneuver 
+    Jaw Worm        Outmaneuver Dodge and Roll Blur 
+    Cultist        Backflip Concentrate Dodge and Roll 
+    Large Slime        Concentrate Burst Backflip 
+    Exordium Thugs        Piercing Wail Slice Blade Dance
+1 skill potion from 5th combat -- only gives Calc. Gamble, Tactician, and Setup. 
+Only way to get any damage card is by fighting 5 combats and taking the Blade Dance or Slice. 
+Events: Winged Statue (-7 HP for removal), Scrap Ooze (5 or 6 hits for Tea Set), Wheel Gremlin (only gives 1 removal), and combat. 
+Neow also offers 1 removal, 100g, and 250g for lost max HP.
+
+While I believe this seed is unwinnable due to the damage that must be taken to obtain additional damage, proving it would require fully simulating several combats.  
+
+### post-CUDA clarity
+After limited success with sts_seed_search and many helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](asdf).  In short, 
 
 
 
-In fact, laziness is built into the code that found this seed.  Enhancing the approach by 
+In fact, laziness is built into the code that found this seed.  Enhancing the approach by
