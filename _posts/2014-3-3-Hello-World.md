@@ -68,7 +68,7 @@ $$
 $$
 {: refdef}
 
-The left-hand side can be thought of as a measure of the _efficiency_ of the filter $$\mathcal{F}$$: how well does it use a resource (time) to reject an unsuitable seed?  With this heuristic in mind, it becomes strikingly clear that the optimal filter order is: 
+The left-hand side can be thought of as a measure of the _efficiency_ of the filter $$\mathcal{F}$$: how well does it use a resource (time) to reject an unsuitable seed?  With this heuristic in mind, it becomes clear that the optimal filter order is: 
 
 1. $$\mathcal{N}:$$ the floor 0 rewards from Neow are "bad".  
 2. $$\mathcal{C}(5):$$ the first 5 card rewards do not adequately augment Silent's damage output.  
