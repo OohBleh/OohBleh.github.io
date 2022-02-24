@@ -63,7 +63,7 @@ what is happening
 
 
 great job, hey notice this change
-![this is a test](https://forgottenarbiter.github.io/images/image-20200621204739562.png)
+![this is a test](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png)
 
 After limited success with sts_seed_search and many helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](asdf).  In short, CUDA can be used to 
 
