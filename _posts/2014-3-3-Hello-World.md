@@ -54,7 +54,11 @@ While I believe this seed is unwinnable due to the damage that must be taken to 
 
 ### the GPU seed farm!
 
-[a picture of bad Silent cards]({{site.baseurl}}/_posts/bad-silent-cards.png)
+
+wow wee, here's a picture
+![bad silent cards didn't load oof]({{site.baseurl}}/_posts/bad-silent-cards.png)
+
+great job
 
 After limited success with sts_seed_search and many helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](asdf).  In short, 
 
