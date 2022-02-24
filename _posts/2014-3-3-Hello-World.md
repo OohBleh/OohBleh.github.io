@@ -43,7 +43,7 @@ Suppose we have two independent filters $$\mathcal{F}_1,\mathcal{F}_2$$ and cons
 {:refdef: style="text-align: center;"}
 $$
 	\mathbb{E}[
-    	\text{time } | 
+    	\text{time spend testing a seed} | 
         \text{ testing } \mathcal{F}_1
         \text{ then } \mathcal{F}_2
     ]
