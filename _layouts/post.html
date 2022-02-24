@@ -42,3 +42,16 @@ published: true
       return katex.renderToString(tex.replace(/%.*/g, ''), {displayMode: true});
   });
 </script>
+<script type="text/javascript" scr="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/Mathjax.js"></script>
+<script type="text/javascript">
+	MathJax.Hub.Config({
+		extensions: ["tex2jax.js"],
+		jax: ["input/TeX", "output/HTML-CSS"], 
+		tex2jax: {
+			inlineMath: [ ['$', '$'], ["\\(","\\)"] ], 
+			displayMath: [ ['$$', '$$'], ["\\[","\\]"] ], 
+			processEscapes: true
+		},
+	"HTML-CSS": { availableFonts: ["LaTeX"] }
+	});
+</script>
