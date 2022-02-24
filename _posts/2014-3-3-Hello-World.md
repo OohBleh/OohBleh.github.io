@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An extremely unwinnable Slay the Spire seed
-published: true
+published: false
 ---
 ## Overview
 In this post, I will describe how [gamerpuppy](https://github.com/gamerpuppy) and I found an unwinnable Slay the Spire seed along with a simple proof of unwinnability.  This project is motivated by ForgottenArbiter's success at finding a (probably) unwinnable seed.  Our goal was to find a seed for which it can be proven unwinnable without simulating combat, and without checking too many cases.  
@@ -35,6 +35,9 @@ As an integer, this seed is 3,431,382,150,268,629 or ~3.4 quadrillion, but we ma
 
 I first got involved in this search in early January not long after finding and routing an [Ascension 20 Heart snipe seed](https://youtu.be/8jHTNGrreTw).  I had accomplished (with glitches and some very careful RNG manipulation) the first turn-1 Heart kill since the boot bug exploited [here](https://youtu.be/4knfPJyKLYY) by ForgottenArbiter was patched.  For it, I used [gamerpuppy's sts_seed_search](https://github.com/gamerpuppy/sts_seed_search), which emulates essential seed searching functions at a low level.  For speedrun-related searches in the past, I have predominantly used ForgottenArbiter's [SeedSearch](https://github.com/ForgottenArbiter/SeedSearch) mod, which runs through the game and comes with an easy to use list of seed criteria.  
 
-But after two weeks of limited success 
+I began my search on sts_seed_search with a variety of different search parameters.  Like Arbiter, I prioritized Neow bonuses, card rewards, and potions first since they are relatively fast to calculate and filter seeds efficiently.  
+After limited success with sts_seed_search and many helpful conversations with gamerpuppy's CUDA code they used for finding 
+
+
 
 In fact, laziness is built into the code that found this seed.  Enhancing the approach by 
