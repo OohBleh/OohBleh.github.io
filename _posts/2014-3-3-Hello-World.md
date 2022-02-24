@@ -89,7 +89,7 @@ While I am optimistic that this seed is unwinnable due to the damage that must b
 
 It became clear to me that in order to find a suitable seed, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only 1 in $$~15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand ($$\mathcal{B}$$), only 1 in every $$~225,000$$ seeds passes through.  
 
-After 10 trillions seeds searched, it was time for a new approach.  
+After finishing a search through the first 10 trillions seeds, making adjustments along the way, it was time for a new approach.  
 
 ### the GPU seed farm
 
