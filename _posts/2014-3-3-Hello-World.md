@@ -74,19 +74,19 @@ These fractional expressions can be thought of as a measure of the _efficiency_ 
 4. $$\mathcal{E}:$$ Lagavulin is the first elite fought.  
 5. $$\mathcal{M}:$$ no shops or rest sites appear before floor $$6$$, and floor $$6$$ only has elite fights.  
 
-For other considerations such as ?-nodes outcomes and boss relic swaps, we print out some information on each seed that passes filters 1 through 5, and test everything else manually.  Adjusting my search parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which meets the above properties.  More precisely: 
+For other considerations such as ?-nodes outcomes and boss relic swaps, we print out some information on each seed that passes filters $$1$$ through $$5$$, and test everything else manually.  Adjusting my search parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which meets the above properties.  More precisely: 
 
-1. $$\mathcal{N}$$: 1 removal, 100g, and 250g for max HP, or swap into Black Star.  
+1. $$\mathcal{N}$$: $$1$$ removal, $$100$$g, and $$250$$g for some max HP, or swap into Black Star.  
 2. $$\mathcal{C}(5)$$: {Deflect, Prepared, Outmaneuver}, {Outmaneuver, Dodge and Roll, Blur}, {Backflip, Concentrate, Dodge and Roll}, {Concentrate, Burst, Backflip}, {Piercing Wail, Slice, Blade Dance}
-3. $$\mathcal{P}(5)$$: 1 skill potion from 5th combat (only gives Calculated Gamble, Tactician, or Setup). 
-4. $$\mathcal{E}$$ and $$\mathcal{M}$$ are met, and one of the floor 6 elites is the "burning" elite.  
-4. Events: Winged Statue (-7 HP for 1 removal), Scrap Ooze (5 or 6 hits for Tea Set), Wheel Gremlin (always gives 1 removal), and combat. 
+3. $$\mathcal{P}(5)$$: $$1$$ skill potion from the $$5$$-th combat (only gives Calculated Gamble, Tactician, or Setup). 
+4. $$\mathcal{E}$$ and $$\mathcal{M}$$ are met, and one of the floor $$6$$ elites is the "burning" elite.  
+4. ?-nodes: Winged Statue ($$-7$$ HP for 1 removal), Scrap Ooze ($$5$$ or $$6$$ hits for Tea Set), Wheel Gremlin (always gives $$1$$ removal), and combat. 
 
 While I am optimistic that this seed is unwinnable, proving it would require fully simulating several combats.  
 
-It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only 1 in $$~15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only 1 in every $$~225,000$$ seeds passes through.  
+It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only $$1$$ in $$\sim 15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only 1 in every $$~225,000$$ seeds passes through.  
 
-After finishing a search through the first 10 trillions seeds, making many adjustments along the way, it was time for a new approach.  
+After finishing a search through the first $$10$$ trillions seeds, making many adjustments along the way, it was time for a new approach.  
 
 ### the GPU seed farm
 
@@ -102,34 +102,34 @@ With the exception of Distraction, which may give a poison or shiv-generating ca
 
 ### A final tradeoff
 
-How likely is the player to encounter $$5$$ combats in a $$\mathcal{B}$$ map?  Constraining $$5$$ combat rewards was proving to be an issue.  What if we only had 4, or even 3 combats in total before fighting a buffed Lagavulin?  Checking the first 100 billion seeds, I discovered that as many as $$~2\%$$ of all $$\mathcal{B}$$ maps had a maximum of 3 combats before floor 6.  Altogether, this new constraint, call it  $$\mathcal{B}(3)$$, is satisfied by $$1$$ in every $$~9.17$$ million seeds, according to the sample.  
+How likely is the player to encounter $$5$$ combats in a $$\mathcal{B}$$ map?  Constraining $$5$$ combat rewards was proving to be an issue.  What if we only had $$4$$, or even $$3$$ combats in total before fighting a buffed Lagavulin?  Checking the first $$100$$ billion seeds, I discovered that as many as $$~2\%$$ of all $$\mathcal{B}$$ maps had a maximum of $$3$$ combats before floor $$6$$.  Altogether, this new constraint, call it $$\mathcal{B}(3)$$, is satisfied by $$1$$ in every $$~9.17$$ million seeds, according to the sample.  
 
-By relaxing the card constraints from $$5$$ rewards to $$3$$ (that is, replace $$\mathcal{C}(5)$$ with $$\mathcal{C}(3)$$), the CUDA code returned a batch of about $$234$$ million seeds between $$1$$ quadrillion and $$6.6$$ quadrillion seeds, after running for roughly 16 hours.  Four seeds MC81APL0TK, UL8LMGQV64, 1778H44QQQP, 18ISL35FYK4 emerged after being tested against properties $$\mathcal{N}, \mathcal{C}(3), \mathcal{P}(3), \mathcal{E}, $$ and $$\mathcal{B}(3)$$,  with only the last one having a suitably unhelpul boss relic swap and event pool.  
+By relaxing the card constraints from $$5$$ rewards to $$3$$ (that is, replace $$\mathcal{C}(5)$$ with $$\mathcal{C}(3)$$), the CUDA code returned a batch of about $$234$$ million seeds between $$1$$ quadrillion and $$6.6$$ quadrillion seeds, after running for roughly $$16$$ hours.  Four seeds MC81APL0TK, UL8LMGQV64, 1778H44QQQP, 18ISL35FYK4 emerged after being tested against properties $$\mathcal{N}, \mathcal{C}(3), \mathcal{P}(3), \mathcal{E}, $$ and $$\mathcal{B}(3)$$,  with only the last one having a suitably unhelpul boss relic swap and event pool.  
 
 Finally, we are prepared to prove this seed is unwinnable.  
 
 ## Proof of unwinnability
 
-Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We list some useful facts about this seed.  
+Let $$\mathcal{BS} := 3,431,382,150,268,629$$ (also known as 18ISL35FYK4}.  We list some useful facts about this seed.  
 
 **Fact A**. As Silent on Ascension 18 or higher with, a normal run with seed $$\mathcal{BS}$$ manually entered has the following properties.  
-1.  Neow offers 1 card removal, gold, or a boss swap into Cursed Key.  
+1.  Neow offers $$1$$ card removal, gold, or a boss swap into Cursed Key.  
 2.  Before floor 6, the only ?-node outcomes are Scrap Ooze, Golden Idol, and The Cleric, in this order.  
 3.  The first 3 combats rewards before Lagavulin are: 
-   - 0 or 1 card from {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
-   - 0 or 1 card from {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
-   - 0 or 1 card from {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
-4.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
-5.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
+   - $$\leq 1$$ card from {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
+   - $$\leq 1$$ card from {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
+   - $$\leq 1$$ card from {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
+4.  Each path to floor $$6$$ encounters either $$2$$ combats and $$3$$ ?-nodes, or 3 combats and $$2$$ ?-nodes.  
+5.  The only map node on floor $$6$$ is an elite combat aganist Lagavulin with $$145$$ HP.  
 
 The following argument was suggested to me by Arbiter.  To prove that $$\mathcal{BS}$$ is unwinnable, we divide the fight according to the times at which a deck shuffle occurs.  In between shuffles, the player can play at most $$5$$ Strikes and at most $$1$$ Neutralize, with damage optimized by playing the Strikes as early as possible.  In this argument, we ignore the player's health, the energy cost of the player's cards, and the metallicize buff on Lagavulin.  
 
-For convenience, let $$k$$ be the combined number of copies of Escape Plan and Prepared in the player's deck.  We state and prove the following claims.  
+For convenience, let $$k$$ be the combined number of copies of Escape Plan and Prepared in the player's deck.  We state and prove the following claims about combat on floor $$6$$.  
 
 
 **Claim B.0**.  The earliest deck shuffle occurs at the start of turn $$1$$ and the next deck shuffle occurs, at the earliest, at the start of turn $$2$$.  
 
-Since Silent's deck begins with 12 basic cards and Ascender's Bane, and by floor 6, only 2 card removals are possible, the player's deck has at least $$11+k$$ cards.  Furthermore, noting the relics available, at most $$7+k$$ cards are drawn on turn $$1$$.  So no other shuffle occurs during turn $$1$$, completing the proof.  
+Since Silent's deck begins with 12 basic cards and Ascender's Bane, and by floor $$6$$, only $$2$$ card removals are possible, the player's deck has at least $$11+k$$ cards.  Furthermore, noting the relics available, at most $$7+k$$ cards are drawn on turn $$1$$.  So no other shuffle occurs during turn $$1$$, completing the proof.  
 
 
 **Claim B.1**.  If the player shuffles the deck at the start of turn $$t$$ where $$t \geq 2$$, then the next deck shuffle occurs, at the earliest, at the start of turn $$t+2$$.  
@@ -144,7 +144,10 @@ Since the player has at most $$5$$ cards in-hand at the start of turn $$t$$, the
 As before, note that the combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Note also that the player has at most $$5$$ cards in-hand just before this shuffle, and at least one of these cards is a draw card.  It follows that turn $$t$$ ends with one draw card and at most $$5$$ non-draw cards in the discard pile.  This implies that the draw pile consists of at least $$10-5 = 5$$ non-draw cards at the end of turn $$t$$.  So no other shuffle occurs during turns $$s$$ and $$s+1$$, as desired.  
 
 
-**Claim C**.  Suppose the player shuffles the deck on turn $$s$$ and that the next deck shuffle occurs during turn $$t$$.  In the time between two deck shuffles, the player can deal at most the damage dealt by playing $$5$$ Strikes and $$1$$ Neutralize on turn $$s$$.  If $$s > 1$$, then the the damage dealt is at most the damage dealt by playing $$5$$ Strikes on turn $$s$$ and $$1$$ Neutralize on turn $$s+1$$.  
+**Claim C**.  Suppose the player shuffles the deck on turn $$s$$.  In the time after this shuffle, but before the next shuffle, the player's damage output is bounded above by the damage dealt with the following sequence of card plays: 
+
+- play $$5$$ Strikes and $$1$$ Neutralize on turn $$s$$ if $$s = 1$$, and 
+- play $$5$$ Strikes on turn $$s$$ and $$1$$ Neutralize on turn $$s+1$$.  
 
 Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand, and thus can be played, at most once.  Starting from turn $$2$$ or higher, at most $$5$$ of these cards can be played on a given turn, and playing the Strikes on the earliest possible turn deals more damage.  
 
