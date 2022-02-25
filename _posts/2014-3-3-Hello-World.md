@@ -125,11 +125,11 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 4.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
 5.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
 
-To prove that $$\mathcal{BS}$$ is unwinnable, we introduce some terminology.  For any positive integer $t$, we say that a _shuffle occurs at time_ $$t$$ if turn $t$ begins with the draw pile (or deck, in the case of turn 1) being shuffled into the draw pile.  We also say that a _shuffle occurs at time_ $$t + 1/2$$ if for some reason during turn $t$, the discard pile is shuffled to form a new draw pile.  For convenience, let $$T = (t(1), t(2), \dots)$$ be the sequence of times $$1\leq t(1) \leq t(2)\leq \cdots$$ at which a shuffle occurs.  We state and prove the following two claims.  
+To prove that $$\mathcal{BS}$$ is unwinnable, we introduce some terminology.  For any positive integer $t$, we say that a _shuffle occurs at time_ $$t$$ if turn $t$ begins with the draw pile (or deck, in the case of turn 1) being shuffled into the draw pile.  We also say that a _shuffle occurs at time_ $$t + 1/2$$ if for some reason during turn $t$, the discard pile is shuffled to form a new draw pile.  For convenience, consider the sequence $$1 = t(1) \leq t(2)\leq \cdots$$ of times at which a shuffle occurs.  We state and prove the following two claims.  
 
-**Claim A.**  Let $$t(i)$$ and $$t(j)$$ be times at which two distinct shuffles occur.  Then $$|t(i) - t(j)| \geq 2$$.  
+**Claim A.**  Let $$t(i)\leq t(j)$$ be times at which two distinct shuffles occur.  Then either $$t(i) = 1$$ and $$t(j) = 2.5$$ or $$|t(i) - t(j)| \geq 2$$.  
 
-To see this, 
+To see this, first note that the at any given time during combat, the combined number of cards in the player's hand, discard pile, and draw pile is at least $$10 + k$$ where $$k$$ is the combined number of copies of Escape Plan and Prepared in the player's deck.  Indeed, the Silent starter deck has 13 cards including Ascender's Bane, no card besides Ascender's Bane can be exhausted, and at most 2 starter cards can be removed prior to combat.  Additionally, we note that 
 
 
 
