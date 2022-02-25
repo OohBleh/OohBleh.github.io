@@ -133,6 +133,9 @@ In this case, the maximum damage done on any given turn is attained by playing 3
 damage to Lagavulin.  Since Lagavulin's HP exceeds 141, the run is unwinnable in this case.  
 
 ### Case 2: No boss relic swap and Outmaneuver is taken
-
+In this case, we note the following: the first mid-combat deck shuffle occurs at the start of turn 3.  To see this, first let 
+- $$s$$ be the number of Silent starter cards (Strike, Defend, Survivor, and Neutralize) in the deck, 
+- let $$k$$ be the number of copies of Escape Plan and Prepared in the deck, and 
+- let $$\ell$$ be the number of other cards in the deck.  
 
 ### Case 3: Swap Ring of the Snake for Cursed Key
