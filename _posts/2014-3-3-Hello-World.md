@@ -119,9 +119,9 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 1.  Neow offers 1 card removal, gold, or a boss swap into Cursed Key.  
 2.  Before floor 6, the only ?-node outcomes are Scrap Ooze, Golden Idol, and The Cleric, in this order.  
 3.  The first 3 combats rewards before Lagavulin are: 
-    - 0 or 1 card from {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
-    - 0 or 1 card from {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
-    - 0 or 1 card from {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
+- 0 or 1 card from {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
+- 0 or 1 card from {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
+- 0 or 1 card from {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
 4.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
 5.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
 
