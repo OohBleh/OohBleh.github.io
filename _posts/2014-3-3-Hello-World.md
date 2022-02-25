@@ -143,9 +143,9 @@ Otherwise, $$r := s-1/2 = \lfloor s\rfloor$$ is an integer and $$s$$ corresponds
 Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand at most once during this time.  On turn $$2$$ or higher, at most $$5$$ of these cards can be played.  
 
 
-Combining the results from Claim B, it follows that the maximum damage dealt to Lagavulin before the 3rd debuff is 
+Applying Claims A and B, it follows that the maximum damage dealt to Lagavulin before the 3rd debuff is 
 {:refdef: style="text-align: center;"}
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png)
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
 
 
