@@ -130,24 +130,24 @@ To prove that $$\mathcal{BS}$$ is unwinnable, we divide the fight according to t
 For convenience, let $$k$$ be the combined number of copies of Escape Plan and Prepared in the player's deck.  We state and prove the following claims.  
 
 
-**Claim B.0**  The earliest deck shuffle occurs at the start of turn $$1$$ and the next deck shuffle occurs, at the earliest, at the start of turn $$2$$.  
+**Claim B.0**.  The earliest deck shuffle occurs at the start of turn $$1$$ and the next deck shuffle occurs, at the earliest, at the start of turn $$2$$.  
 
 Since Silent's deck begins with 12 basic cards and Ascender's Bane, and by floor 6, only 2 card removals are possible, the player's deck has at least $$11+k$$ cards.  Furthermore, noting the relics available, at most $$7+k$$ cards are drawn on turn $$1$$.  So no other shuffle occurs during turn $$1$$, completing the proof.  
 
 
-**Claim B.1**  If the player shuffles the deck at the start of turn $$t$$ where $$t \geq 2$$, then the next deck shuffle occurs, at the earliest, at the start of turn $$t+2$$.  
+**Claim B.1**.  If the player shuffles the deck at the start of turn $$t$$ where $$t \geq 2$$, then the next deck shuffle occurs, at the earliest, at the start of turn $$t+2$$.  
 
 Noting that by floor $$6$$, at most $$2$$ removals are possible, and since Ascender's Bane can be exhausted, it follows that combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Since $$t \geq 2$$, turn $$t$$ begins with the player drawing 5 cards.  Moreover, due to the limited card pool and relics, and the lack of potions, no cards can be played to increase the number of cards in-hand.  It follows that the player has at most $$5$$ cards in-hand just before the shuffle at time $$t$$.  
 
 Since the player has at most $$5$$ cards in-hand at the start of turn $$t$$, there are at least $$5+k$$ cards in the draw pile.  On turns $$t$$ and $$t+1$$, at most $$k$$ draw cards (Escape Plan and Prepared) can be played.  It follows that the player cannot shuffle the deck again during turns $$t$$ and $$t+1$$.  
 
 
-**Claim B.1**  If the player shuffles the deck during turn $$t$$ where $$t \geq 2$$ by playing cards, then the next deck shuffle occurs, at the earliest, during turn $$t+2$$.  
+**Claim B.2**.  If the player shuffles the deck during turn $$t$$ where $$t \geq 2$$ by playing cards, then the next deck shuffle occurs, at the earliest, during turn $$t+2$$.  
 
 As before, note that the combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Note also that the player has at most $$5$$ cards in-hand just before this shuffle, and at least one of these cards is a draw card.  It follows that turn $$t$$ ends with one draw card and at most $$5$$ non-draw cards in the discard pile.  This implies that the draw pile consists of at least $$10-5 = 5$$ non-draw cards at the end of turn $$t$$.  So no other shuffle occurs during turns $$s$$ and $$s+1$$, as desired.  
 
 
-**Claim C**  Suppose the player shuffles the deck on turn $$s$$ and that the next deck shuffle occurs during turn $$t$$.  In the time between two deck shuffles, the player can deal at most the damage dealt by playing $$5$$ Strikes and $$1$$ Neutralize on turn $$s$$.  If $$s > 1$$, then the the damage dealt is at most the damage dealt by playing $$5$$ Strikes on turn $$s$$ and $$1$$ Neutralize on turn $$s+1$$.  
+**Claim C**.  Suppose the player shuffles the deck on turn $$s$$ and that the next deck shuffle occurs during turn $$t$$.  In the time between two deck shuffles, the player can deal at most the damage dealt by playing $$5$$ Strikes and $$1$$ Neutralize on turn $$s$$.  If $$s > 1$$, then the the damage dealt is at most the damage dealt by playing $$5$$ Strikes on turn $$s$$ and $$1$$ Neutralize on turn $$s+1$$.  
 
 Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand, and thus can be played, at most once.  Starting from turn $$2$$ or higher, at most $$5$$ of these cards can be played on a given turn, and playing the Strikes on the earliest possible turn deals more damage.  
 
