@@ -127,7 +127,7 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 
 To prove that $$\mathcal{BS}$$ is unwinnable, we introduce some terminology.  For any positive integer $t$, we say that a _shuffle occurs at time_ $$t$$ if turn $t$ begins with the draw pile (or deck, in the case of turn 1) being shuffled into the draw pile.  We also say that a _shuffle occurs at time_ $$t + 1/2$$ if for some reason during turn $t$, the discard pile is shuffled to form a new draw pile.  For convenience, consider the sequence $$1 = t(1) \leq t(2)\leq \cdots$$ of times at which a shuffle occurs.  We state and prove the following two claims.  
 
-**Claim A.**  Let $$t(i)\leq t(j)$$ be times at which two distinct shuffles occur.  Then either $$t(i) = 1$$ and $$t(j) \in\{2,2.5\}$$ or $$|t(i) - t(j)| \geq 2$$.  
+**Claim A.**  Let $$t(i)\leq t(j)$$ be times at which two distinct shuffles occur.  Then either $$t(i) = 1$$ and $$t(j) \in\{2,2.5\}$$ or $$t(j) - t(i) \geq 2$$.  
 
 To see this, let $$k$$ be the combined number of copies of Escape Plan and Prepared in the player's deck.  We suppose first that $$t(i) = 1$$.  Since Silent's deck begins with 12 basic cards and Ascender's Bane, and by floor 6, only 6 card removals are possible, the player's deck has at least $$11+k$$ cards.  Furthermore, noting the relics available, at most $$7+k$$ cards are drawn on turn $$1$$.  So $$t(j) > 1.5$$ as desired.  
 
