@@ -125,25 +125,34 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 4.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
 5.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
 
-To prove that $$\mathcal{BS}$$ is unwinnable, we introduce some terminology.  For any positive integer $$t$$, we say that a _shuffle occurs at time_ $$t$$ if turn $$t$$ begins with the draw pile (or deck, in the case of turn 1) being shuffled into the draw pile.  We also say that a _shuffle occurs at time_ $$t + 1/2$$ if for some reason during turn $$t$$, the discard pile is shuffled to form a new draw pile.  For convenience, consider the sequence $$1 = t(1) \leq t(2)\leq \cdots$$ of times at which a shuffle occurs.  We state and prove the following two claims.  
+To prove that $$\mathcal{BS}$$ is unwinnable, we divide the fight according to the times at which a deck shuffle occurs.  In between shuffles, the player can play at most $$5$$ Strikes and at most $$1$$ Neutralize, with damage optimized by playing the Strikes as early as possible.  In this argument, we ignore the player's health, the energy cost of the player's cards, and the metallicize buff on Lagavulin.  
 
-**Claim A.**  Let $$s\leq t$$ be times at which two distinct shuffles occur.  Then either $$s = 1$$ and $$t \in\{2,2.5\}$$ or $$t - s \geq 2$$.  
-
-To see this, let $$k$$ be the combined number of copies of Escape Plan and Prepared in the player's deck.  We suppose first that $$s = 1$$.  Since Silent's deck begins with 12 basic cards and Ascender's Bane, and by floor 6, only 2 card removals are possible, the player's deck has at least $$11+k$$ cards.  Furthermore, noting the relics available, at most $$7+k$$ cards are drawn on turn $$1$$.  So no other shuffle occurs at time $$1$$ or $$1.5$$.  $$t > 1.5$$ as desired.  
-
-Otherwise, we assume $$s \geq 2$$.  First, note that the at any given point during combat, the combined number of cards in the player's hand, discard pile, and draw pile is at least $$10 + k$$.  Indeed, the Silent starter deck has 13 cards including Ascender's Bane, only Ascender's Bane can be exhausted, and at most 2 starter cards can be removed prior to combat.  Since $$s \geq 2$$, turn $$\lfloor s\rfloor$$ begins with the player drawing 5 cards.  Moreover, due to the limited card pool and relics, and the lack of potions, no cards can be played to increase the number of cards in-hand.  It follows that the player has at most $$5$$ cards in-hand just before the shuffle at time $$s$$.  
-
-If $$s$$ is an integer, i.e., $$s$$ corresponds to the shuffle at the beginning of turn $$s = \lfloor s\rfloor$$, then turn $$s$$ begins with at least $$5+k$$ cards in the draw pile.  On turns $$s$$ and $$s+1$$, at most $$k$$ draw cards (Escape Plan and Prepared) can be played, and it follows that no other shuffle occurs at times $$s+1/2, s+1$$, or $$s+3/2$$.  So $$t-s\geq 2$$ as desired.  
-
-Otherwise, $$r := s-1/2 = \lfloor s\rfloor$$ is an integer and $$s$$ corresponds to a shuffle caused by playing a draw card during turn $$r$$.  Since the player has at most $$5$$ cards in-hand just before the shuffle at time $$s$$, and at least one of these cards is a draw card, it follows that turn $$r$$ ends with one draw card and at most $$5$$ non-draw cards in the discard pile.  This implies that the draw pile consists of at least $$10-5 = 5$$ non-draw cards at the end of turn $$r$$.  It follows that no other shuffle occurs at times $$s$$, $$s+1/2$$, or $$s+1$$.  So $$t-s\geq 2$$ as desired.  
+For convenience, let $$k$$ be the combined number of copies of Escape Plan and Prepared in the player's deck.  We state and prove the following claims.  
 
 
-**Claim B.**  If the player shuffles the deck at times $$t$$, then the damage dealt to Lagavulin from time $$t$$ until the next shuffle is at most the damage dealt by playing $$5$$ Strikes and $$1$$ Neutralize on turn $$\lfloor t\rfloor$$.  If $$t > 1$$, then the the damage dealt by playing $$5$$ Strikes on turn $$\lfloor t\rfloor$$ and $$1$$ Neutralize on turn $$\lfloor t+1\rfloor$$.  
+**Claim B.0**  The earliest deck shuffle occurs at the start of turn $$1$$ and the next deck shuffle occurs, at the earliest, at the start of turn $$2$$.  
 
-Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand at most once during this time.  On turn $$2$$ or higher, at most $$5$$ of these cards can be played.  
+Since Silent's deck begins with 12 basic cards and Ascender's Bane, and by floor 6, only 2 card removals are possible, the player's deck has at least $$11+k$$ cards.  Furthermore, noting the relics available, at most $$7+k$$ cards are drawn on turn $$1$$.  So no other shuffle occurs during turn $$1$$, completing the proof.  
 
 
-To complete the proof, consider the sequence $$1 = s(1)\leq s(2)\leq \cdots$$ of (integer) turns on which a shuffle occurs.  That is, if a shuffle occurs at time $$t(i)$$, then $$s(i) := \lfloor t(i)\rfloor$$.  By Claim A, it follows that $$s(2)-s(1)\geq 1$$ and $$s(i+1)-s(i)\geq 2$$ for all other values of $$i$$.  By Claim B, the maximum damage dealt to Lagavulin before the 3rd debuff is 
+**Claim B.1**  If the player shuffles the deck at the start of turn $$t$$ where $$t \geq 2$$, then the next deck shuffle occurs, at the earliest, at the start of turn $$t+2$$.  
+
+Noting that by floor $$6$$, at most $$2$$ removals are possible, and since Ascender's Bane can be exhausted, it follows that combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Since $$t \geq 2$$, turn $$t$$ begins with the player drawing 5 cards.  Moreover, due to the limited card pool and relics, and the lack of potions, no cards can be played to increase the number of cards in-hand.  It follows that the player has at most $$5$$ cards in-hand just before the shuffle at time $$t$$.  
+
+Since the player has at most $$5$$ cards in-hand at the start of turn $$t$$, there are at least $$5+k$$ cards in the draw pile.  On turns $$t$$ and $$t+1$$, at most $$k$$ draw cards (Escape Plan and Prepared) can be played.  It follows that the player cannot shuffle the deck again during turns $$t$$ and $$t+1$$.  
+
+
+**Claim B.1**  If the player shuffles the deck during turn $$t$$ where $$t \geq 2$$ by playing cards, then the next deck shuffle occurs, at the earliest, during turn $$t+2$$.  
+
+As before, note that the combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Note also that the player has at most $$5$$ cards in-hand just before this shuffle, and at least one of these cards is a draw card.  It follows that turn $$t$$ ends with one draw card and at most $$5$$ non-draw cards in the discard pile.  This implies that the draw pile consists of at least $$10-5 = 5$$ non-draw cards at the end of turn $$t$$.  So no other shuffle occurs during turns $$s$$ and $$s+1$$, as desired.  
+
+
+**Claim C**  Suppose the player shuffles the deck on turn $$s$$ and that the next deck shuffle occurs during turn $$t$$.  In the time between two deck shuffles, the player can deal at most the damage dealt by playing $$5$$ Strikes and $$1$$ Neutralize on turn $$s$$.  If $$s > 1$$, then the the damage dealt is at most the damage dealt by playing $$5$$ Strikes on turn $$s$$ and $$1$$ Neutralize on turn $$s+1\rfloor$$.  
+
+Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand, and thus can be played, at most once.  Starting from turn $$2$$ or higher, at most $$5$$ of these cards can be played on a given turn, and playing the Strikes on the earliest possible turn deals more damage.  
+
+
+To complete the proof, consider the sequence $$1 = t(1)\leq t(2)\leq \cdots$$ of turns on which a shuffle occurs.  By Claims B.0, B.1, and B.2, it follows that $$t(2)\geq t(1) + 1$$ and $$t(i+1) \geq t(i) + 2$$ for all other values of $$i$$.  By Claim C, the maximum damage dealt to Lagavulin before the 3rd debuff is 
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
