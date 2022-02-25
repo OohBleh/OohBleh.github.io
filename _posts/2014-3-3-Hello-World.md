@@ -143,11 +143,11 @@ Otherwise, $$r := s-1/2 = \lfloor s\rfloor$$ is an integer and $$s$$ corresponds
 Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand at most once during this time.  On turn $$2$$ or higher, at most $$5$$ of these cards can be played.  
 
 
-To complete the proof, consider the sequence $$1 = s(1)\leq s(2)\leq \cdots$$ of  of (integer) turns on which a shuffle occurs.  That is, if a shuffle occurs at time $$t(i)$$, then $$s(i) := \lfloor t(i)\rfloor$$.  By Claim A, it follows that $$s(2)-s(1)\geq 1$$ and $$s(i+1)-s(i)\geq 2$$ for all other values of $$i$$.  By Claim B, the maximum damage dealt to Lagavulin before the 3rd debuff is 
+To complete the proof, consider the sequence $$1 = s(1)\leq s(2)\leq \cdots$$ of (integer) turns on which a shuffle occurs.  That is, if a shuffle occurs at time $$t(i)$$, then $$s(i) := \lfloor t(i)\rfloor$$.  By Claim A, it follows that $$s(2)-s(1)\geq 1$$ and $$s(i+1)-s(i)\geq 2$$ for all other values of $$i$$.  By Claim B, the maximum damage dealt to Lagavulin before the 3rd debuff is 
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
-
+Since Lagavulin's total HP equals 144, $$\mathcal{BS}$$ is unwinnable.  
 
 ### Case 1: No boss relic swap and Outmaneuver is skipped
 In this case, the maximum damage done on any given turn is attained by playing 3 copies of Strike and Neutralize.  The player may deal damage on at most 4 turns with a strength of 0, 3 with a strength of -2, and 3 with a strength of -4.  Before Lagavulin applies the 3rd debuff, the player can deal at most 
