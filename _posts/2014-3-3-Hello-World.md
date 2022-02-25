@@ -137,5 +137,6 @@ In this case, we note the following: the first mid-combat deck shuffle occurs at
 - $$s$$ be the number of Silent starter cards (Strike, Defend, Survivor, and Neutralize) in the deck, 
 - let $$k$$ be the number of copies of Escape Plan and Prepared in the deck, and 
 - let $$\ell$$ be the number of other cards in the deck.  
+If the player visits only 2 combats, then the player may remove at most 2 starter cards (on floor 0 and at the 3rd ?-node which is The Cleric), so $$s\in\{11,12,13\}$$.  Additionally, by assumption, the player takes Outmaneuver from the combat, so $$(k,\ell)\in\{(0,1),(1,1)\}$$.  
 
 ### Case 3: Swap Ring of the Snake for Cursed Key
