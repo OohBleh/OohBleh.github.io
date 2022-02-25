@@ -147,7 +147,7 @@ To complete the proof, consider the sequence $$1 = s(1)\leq s(2)\leq \cdots$$ of
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
-Since Lagavulin's total HP equals 144, $$\mathcal{BS}$$ is unwinnable.  
+Since Lagavulin's total HP equals 144, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension 18 or higher.  
 
 ### Case 1: No boss relic swap and Outmaneuver is skipped
 In this case, the maximum damage done on any given turn is attained by playing 3 copies of Strike and Neutralize.  The player may deal damage on at most 4 turns with a strength of 0, 3 with a strength of -2, and 3 with a strength of -4.  Before Lagavulin applies the 3rd debuff, the player can deal at most 
