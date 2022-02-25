@@ -125,6 +125,12 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 4.  Each path to floor 6 encounters either 2 combats and 3 ?-nodes, or 3 combats and 2 ?-nodes.  
 5.  The only map node on floor 6 is an elite combat aganist Lagavulin with 145 HP.  
 
+To prove that $$\mathcal{BS}$$ is unwinnable, we introduce some terminology.  For any positive integer $t$, we say that a _shuffle occurs at time_ $$t$$ if turn $t$ begins with the draw pile (or deck, in the case of turn 1) being shuffled into the draw pile.  We also say that a _shuffle occurs at time_ $$t + 1/2$$ if for some reason during turn $t$, the discard pile is shuffled to form a new draw pile.  For convenience, let $$T = (t(1), t(2), \dots)$$ be the sequence of times $$1\leq t(1) \leq t(2)\leq \cdots$$ at which a shuffle occurs.  We state and prove the following two claims.  
+
+**Claim A.**  Let 
+
+
+
 ### Case 1: No boss relic swap and Outmaneuver is skipped
 In this case, the maximum damage done on any given turn is attained by playing 3 copies of Strike and Neutralize.  The player may deal damage on at most 4 turns with a strength of 0, 3 with a strength of -2, and 3 with a strength of -4.  Before Lagavulin applies the 3rd debuff, the player can deal at most 
 {:refdef: style="text-align: center;"}
