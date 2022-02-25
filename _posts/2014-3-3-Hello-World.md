@@ -148,22 +148,3 @@ To complete the proof, consider the sequence $$1 = s(1)\leq s(2)\leq \cdots$$ of
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
 Since Lagavulin's total HP equals 144, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension 18 or higher.  
-
-### Case 1: No boss relic swap and Outmaneuver is skipped
-In this case, the maximum damage done on any given turn is attained by playing 3 copies of Strike and Neutralize.  The player may deal damage on at most 4 turns with a strength of 0, 3 with a strength of -2, and 3 with a strength of -4.  Before Lagavulin applies the 3rd debuff, the player can deal at most 
-{:refdef: style="text-align: center;"}
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/no-energy-unlimited-draw.png)
-{: refdef}
-damage to Lagavulin.  Since Lagavulin's HP exceeds 141, the run is unwinnable in this case.  
-
-### Case 2: No boss relic swap and Outmaneuver is taken
-In this case, we note the following: the first mid-combat deck shuffle occurs at the start of turn 3.  To see this, first let 
-- $$s$$ be the number of Silent starter cards (Strike, Defend, Survivor, and Neutralize) in the deck, 
-- let $$k$$ be the number of copies of Escape Plan and Prepared in the deck, and 
-- let $$\ell$$ be the number of other cards in the deck.  
-
-If the player visits only 2 combats, then the player may remove at most 2 starter cards (on floor 0 and at the 3rd ?-node which is The Cleric), so $$s\in\{11,12,13\}$$.  Additionally, by assumption, the player takes Outmaneuver from the 2nd combat combat, so $$(k,\ell)\in\{(0,1),(0,2),(1,1)\}$$.  Note that the player's deck size is $$12\leq s+k+\ell\leq 15$$, with the left-hand equality attained if and only if $$k = 0$$.  If $$s+k+\ell = 12$$, then the player has no draw cards and draws exactly $$12$$ cards on turns 1 and 2, leaving the draw pile empty at the end of the turn.  On ther other hand, if $$s+k+\ell\in\{13,14,15\}$$, then the player may be able to draw up to 1 card during turns 1 and 2, so at the end of turn 2, the draw pile contains $$0, 1, $$ or $$2$$ cards.  In both cases, turn 3 begins with a deck shuffle.  
-
-
-
-### Case 3: Swap Ring of the Snake for Cursed Key
