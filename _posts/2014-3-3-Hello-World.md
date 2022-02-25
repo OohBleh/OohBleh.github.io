@@ -141,7 +141,7 @@ Since the player has at most $$5$$ cards in-hand at the start of turn $$t$$, the
 
 **Claim B.2**.  If the player shuffles the deck during turn $$t$$ where $$t \geq 2$$ by playing cards, then the next deck shuffle occurs, at the earliest, during turn $$t+2$$.  
 
-As before, note that the combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Note also that the player has at most $$5$$ cards in-hand just before this shuffle, and at least one of these cards is a draw card.  It follows that turn $$t$$ ends with one draw card and at most $$5$$ non-draw cards in the discard pile.  This implies that the draw pile consists of at least $$10-5 = 5$$ non-draw cards at the end of turn $$t$$.  So no other shuffle occurs during turns $$s$$ and $$s+1$$, as desired.  
+As before, note that the combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Note also that the player has at most $$5$$ cards in-hand just before this shuffle, and at least one of these cards is a draw card.  It follows that turn $$t$$ ends with one draw card and at most $$5$$ non-draw cards in the discard pile.  This implies that the draw pile consists of at least $$10-5 = 5$$ non-draw cards at the end of turn $$t$$.  So no other shuffle occurs during turns $$t$$ and $$t+1$$, as desired.  
 
 
 **Claim C**.  Suppose the player shuffles the deck on turn $$s$$.  In the time after this shuffle, but before the next shuffle, the player's damage output is bounded above by the damage dealt with the following sequence of card plays: 
@@ -157,3 +157,6 @@ To complete the proof, consider the sequence $$1 = t(1)\leq t(2)\leq \cdots$$ of
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
 Since Lagavulin's total HP equals 144, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension 18 or higher.  
+
+## Future work
+
