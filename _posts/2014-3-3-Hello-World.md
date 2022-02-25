@@ -147,12 +147,12 @@ Since the player has at most $$5$$ cards in-hand at the start of turn $$t$$, the
 As before, note that the combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Note also that the player has at most $$5$$ cards in-hand just before this shuffle, and at least one of these cards is a draw card.  It follows that turn $$t$$ ends with one draw card and at most $$5$$ non-draw cards in the discard pile.  This implies that the draw pile consists of at least $$10-5 = 5$$ non-draw cards at the end of turn $$t$$.  So no other shuffle occurs during turns $$s$$ and $$s+1$$, as desired.  
 
 
-**Claim C**  Suppose the player shuffles the deck on turn $$s$$ and that the next deck shuffle occurs during turn $$t$$.  In the time between two deck shuffles, the player can deal at most the damage dealt by playing $$5$$ Strikes and $$1$$ Neutralize on turn $$s$$.  If $$s > 1$$, then the the damage dealt is at most the damage dealt by playing $$5$$ Strikes on turn $$s$$ and $$1$$ Neutralize on turn $$s+1\rfloor$$.  
+**Claim C**  Suppose the player shuffles the deck on turn $$s$$ and that the next deck shuffle occurs during turn $$t$$.  In the time between two deck shuffles, the player can deal at most the damage dealt by playing $$5$$ Strikes and $$1$$ Neutralize on turn $$s$$.  If $$s > 1$$, then the the damage dealt is at most the damage dealt by playing $$5$$ Strikes on turn $$s$$ and $$1$$ Neutralize on turn $$s+1$$.  
 
 Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand, and thus can be played, at most once.  Starting from turn $$2$$ or higher, at most $$5$$ of these cards can be played on a given turn, and playing the Strikes on the earliest possible turn deals more damage.  
 
 
-To complete the proof, consider the sequence $$1 = t(1)\leq t(2)\leq \cdots$$ of turns on which a shuffle occurs.  By Claims B.0, B.1, and B.2, it follows that $$t(2)\geq t(1) + 1$$ and $$t(i+1) \geq t(i) + 2$$ for all other values of $$i$$.  By Claim C, the maximum damage dealt to Lagavulin before the 3rd debuff is 
+To complete the proof, consider the sequence $$1 = t(1)\leq t(2)\leq \cdots$$ of turns on which a shuffle occurs.  By Claims B.0, B.1, and B.2, it follows that $$t(2)\geq t(1) + 1$$ and $$t(i+1) \geq t(i) + 2$$ for all other values of $$i$$.  By Claim C, the maximum damage dealt to Lagavulin before the 3rd debuff is bounded above by the damage dealt by (1) playing $$5$$ Strikes and $$1$$ Neutralize on the "wake-up" turn, and alternatingly on future turns playing (2) $$5$$ Strikes on even turns and $$1$$ Neutralize on odd turns.  So the damage dealt to Lagavulin before the 3rd debuff is applied is 
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
