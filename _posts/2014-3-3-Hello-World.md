@@ -127,7 +127,9 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629 \text{ (also, 18ISL35FYK4})$$.  We l
 
 To prove that $$\mathcal{BS}$$ is unwinnable, we introduce some terminology.  For any positive integer $t$, we say that a _shuffle occurs at time_ $$t$$ if turn $t$ begins with the draw pile (or deck, in the case of turn 1) being shuffled into the draw pile.  We also say that a _shuffle occurs at time_ $$t + 1/2$$ if for some reason during turn $t$, the discard pile is shuffled to form a new draw pile.  For convenience, let $$T = (t(1), t(2), \dots)$$ be the sequence of times $$1\leq t(1) \leq t(2)\leq \cdots$$ at which a shuffle occurs.  We state and prove the following two claims.  
 
-**Claim A.**  Let 
+**Claim A.**  Let $$t(i)$$ and $$t(j)$$ be times at which two distinct shuffles occur.  Then $$|t(i) - t(j)| \geq 2$$.  
+
+To see this, 
 
 
 
