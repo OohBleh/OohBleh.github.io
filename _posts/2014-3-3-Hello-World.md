@@ -138,7 +138,9 @@ If $$s$$ is an integer, i.e., $$s$$ corresponds to the shuffle at the beginning 
 Otherwise, $$r := s-1/2 = \lfloor s\rfloor$$ is an integer and $$s$$ corresponds to a shuffle caused by playing a draw card during turn $$r$$.  Since the player has at most $$5$$ cards in-hand just before the shuffle at time $$s$$, and at least one of these cards is a draw card, it follows that turn $$r$$ ends with one draw card and at most $$5$$ non-draw cards in the discard pile.  This implies that the draw pile consists of at least $$10-5 = 5$$ non-draw cards at the end of turn $$r$$.  It follows that no other shuffle occurs at times $$s$$, $$s+1/2$$, or $$s+1$$.  So $$t-s\geq 2$$ as desired.  
 
 
-**Claim B.**  If the player shuffles the deck at times $$t(i)$$ and $$t(i+1)$$, then the damage dealt to Lagavulin in between these two shuffles is at most the damage dealt by playing $$5$$ Strikes on turn $$\lfloor t(i)\rfloor$$ and $$1$$ Neutralize on turn $$\lfloor t(i+1)\rfloor$$.  
+**Claim B.**  If the player shuffles the deck at times $$t$$, then the damage dealt to Lagavulin from time $$t$$ until the next shuffle is at most the damage dealt by playing $$5$$ Strikes and $$1$$ Neutralize on turn $$\lfloor t(i)\rfloor$$.  If $$t > 1$$, then the the damage dealt by playing $$5$$ Strikes on turn $$\lfloor t(i)\rfloor$$ and $$1$$ Neutralize on turn $$\lfloor t(i)\rfloor$$.  
+
+Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand at most once during this time.  On turn $$2$$ or higher, at most $$5$$ of these cards can be played.  
 
 
 ### Case 1: No boss relic swap and Outmaneuver is skipped
