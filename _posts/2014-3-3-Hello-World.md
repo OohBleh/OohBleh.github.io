@@ -140,4 +140,6 @@ In this case, we note the following: the first mid-combat deck shuffle occurs at
 
 If the player visits only 2 combats, then the player may remove at most 2 starter cards (on floor 0 and at the 3rd ?-node which is The Cleric), so $$s\in\{11,12,13\}$$.  Additionally, by assumption, the player takes Outmaneuver from the 2nd combat combat, so $$(k,\ell)\in\{(0,1),(0,2),(1,1)\}$$.  Note that the player's deck size is $$12\leq s+k+\ell\leq 15$$, with the left-hand equality attained if and only if $$k = 0$$.  If $$s+k+\ell = 12$$, then the player has no draw cards and draws exactly $$12$$ cards on turns 1 and 2, leaving the draw pile empty at the end of the turn.  On ther other hand, if $$s+k+\ell\in\{13,14,15\}$$, then the player may be able to draw up to 1 card during turns 1 and 2, so at the end of turn 2, the draw pile contains $$0, 1, $$ or $$2$$ cards.  In both cases, turn 3 begins with a deck shuffle.  
 
+
+
 ### Case 3: Swap Ring of the Snake for Cursed Key
