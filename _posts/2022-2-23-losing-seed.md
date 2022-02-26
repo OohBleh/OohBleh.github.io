@@ -128,7 +128,7 @@ For convenience, let $$k$$ be the combined number of copies of Escape Plan and P
 
 **Claim B.0**.  The first deck shuffle occurs at the start of turn $$1$$ and the next deck shuffle occurs, at the earliest, at the start of turn $$2$$.  
 
-Since Silent's deck begins with 12 basic cards and Ascender's Bane, and by floor $$6$$, only $$2$$ card removals are possible, the player's deck has at least $$11+k$$ cards.  Furthermore, noting the relics available, at most $$7+k$$ cards are drawn on turn $$1$$.  So no other shuffle occurs during turn $$1$$, completing the proof.  
+Since Silent's deck begins with $$12$$ basic cards and Ascender's Bane, and by floor $$6$$, only $$2$$ card removals are possible, the player's deck has at least $$11+k$$ cards.  Furthermore, noting the relics available, at most $$7+k$$ cards are drawn on turn $$1$$.  So no other shuffle occurs during turn $$1$$, completing the proof.  
 
 
 **Claim B.1**.  If the player shuffles the deck at the start of turn $$t$$ where $$t \geq 2$$, then the next deck shuffle occurs, at the earliest, at the start of turn $$t+2$$.  
