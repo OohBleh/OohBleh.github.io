@@ -1,7 +1,7 @@
 ---
 layout: post
 title: An extremely unwinnable Slay the Spire seed
-published: false
+published: true
 ---
 
 ## Overview
