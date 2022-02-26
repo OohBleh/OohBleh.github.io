@@ -151,11 +151,11 @@ As before, note that the combined number of cards in the player's hand, discard 
 Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand, and thus can be played, at most once.  Starting from turn $$2$$ or higher, at most $$5$$ of these cards can be played on a given turn, and playing the Strikes on the earliest possible turn deals more damage.  
 
 
-To complete the proof, consider the sequence $$1 = t(1)\leq t(2)\leq \cdots$$ of turns on which a shuffle occurs.  By Claims B.0, B.1, and B.2, it follows that $$t(2)\geq 2$$ and $$t(i) \geq t(i-1) + 2$$ for all $$i \geq 3$$ such that $$t(i)$$ is defined.  By Claim C, the maximum damage dealt to Lagavulin before the 3rd debuff is bounded above by the damage dealt by (1) playing $$5$$ Strikes and $$1$$ Neutralize on the "wake-up" turn, and (2) alternatingly on future turns playing $$5$$ Strikes on even turns and $$1$$ Neutralize on odd turns.  So the damage dealt to Lagavulin before the 3rd debuff is applied is 
+To complete the proof, consider the sequence $$1 = t(1)\leq t(2)\leq \cdots$$ of turns on which a shuffle occurs.  By Claims B.0, B.1, and B.2, it follows that $$t(2)\geq 2$$ and $$t(i) \geq t(i-1) + 2$$ for all $$i \geq 3$$ such that $$t(i)$$ is defined.  By Claim C, the maximum damage dealt to Lagavulin before the 3rd debuff is bounded above by the damage dealt by (1) playing $$5$$ Strikes and $$1$$ Neutralize on the "wake-up" turn, and (2) alternatingly on future turns playing $$5$$ Strikes on even turns and $$1$$ Neutralize on odd turns.  So the damage dealt to Lagavulin before the $$3$$-rd debuff is applied is 
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
-Since Lagavulin's total HP equals 145, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension 18 or higher.  
+Since Lagavulin's total HP equals $$145$$, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension $$18$$ or higher.  
 
 ## Future work
 
@@ -170,8 +170,7 @@ To work around this, we could run the search for a longer time to find many seed
 
 ### What about other characters?  
 
-As Arbiter argued, it is likely that unwinnable seeds for Ironclad and Defect exist.  However, it is likely that a proof of unwinnability would require full combat simulation to test all possible ways to manipulate shuffle RNG and card play.  Other characters' starter decks can deal damage to Lagavulin after the 3rd turn of debuffing, and exhaustively simulating more than $$10$$ turns is likely impractical.  
-I believe that the following search criteria are likely to yield an unwinnable Ironclad seed: 
+As Arbiter argued, it is likely that unwinnable seeds for Ironclad and Defect exist.  However, it is also likely that a proof of unwinnability would involve the shuffle RNG of fights, and perhaps a full combat simulation to test sequences of mid-combat decisions for survivability.  Other characters' starter decks can deal damage to Lagavulin after the $$3$$-rd turn of debuffing, and exhaustively simulating more than $$10$$ turns is likely impractical.  I believe that the following search criteria are likely to yield an unwinnable Ironclad seed: 
 
 1.  $$\mathcal{N}$$: transform 1 (receive an unhelpful card), 100g, 250g for any downside, and a harmful or neutral boss relic swap (Black Star, Sacred Bark, etc)
 2.  $$\mathcal{C}(3)$$: only offered draw-neutral skill cards and unhelpful powers
@@ -185,4 +184,12 @@ Compared to Lagavulin, Gremlin Nob...
 - penalizes playing skill cards and severely limits deck manipulation and blocking, and 
 - still has at least $$106$$ HP if given the max HP buff.  
 
-If the player draws Bash too late during the first deck shuffle and has an unfavorable reshuffle with their Strike cards, they are likely unable to survive Gremlin Nob's attack for too many turns, even if they are able to enter the fight with full HP ($$80$$).  Unmitigated, Gremlin Nob deals a minimum of $$88$$ damage in the first $$6$$ turns.
+If the player draws Bash too late during the first deck shuffle and has an unfavorable reshuffle with their Strike cards, they are likely unable to survive Gremlin Nob's attack for too many turns, even if they are able to enter the fight with full HP ($$80$$).  Unmitigated, Gremlin Nob deals a minimum of $$88$$ damage in the first $$6$$ turns.  
+
+For a similar reason, the Defect may also be unable to survive an unfavorable combat against a buffed Gremlin Nob.  
+
+#### What about Watcher?  
+
+While Watcher is highly regarded as the strongest of the $$4$$ characters in _Slay the Spire_, I believe that an unwinnable Watcher seed may be found and proven with the aid of a combat simulator.  During the first two cycles through her starter deck, Watcher deals a maximum of $$123$$ damage during the first two cycles through the deck.  If the player is unable to play $$2$$ Strikes during this time, this amount is reduced to $$99$$, which is less than the minimum HP of a HP-buffed Gremlin Nob.  Remaining in Wrath stance also poses a significant constraint on the player.  If the player is in Wrath during a $$3$$-attack cycle, then Gremlin Nob's attacks during this time total $$112$$ damage, which eclipses Watcher's starting max HP of $$72$$.  
+
+How many 
