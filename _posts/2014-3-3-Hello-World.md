@@ -160,3 +160,30 @@ Since Lagavulin's total HP equals 144, $$\mathcal{BS}$$ is unwinnable as Silent 
 
 ## Future work
 
+With more powerful seedsearching tools at our disposal, we return to some questions considered by Arbiter in his [blog on unwinnable seeds](https://forgottenarbiter.github.io/Is-Every-Seed-Winnable/), and some other problems.  If you are interested in joining the search, take a look at the [CUDA code](https://github.com/OohBleh/cuda-the-spire) as well as [sts_seed_search](https://github.com/gamerpuppy/sts_seed_search).  
+
+### What about an unwinnable Silent seed where the player gets Neow's Lament?  
+
+As a running assumption during this project, we assumed that the unwinnable seed had to be manually entered.  A manually entered seed always offers the player 4 options from Neow on floor $$0$$.  If instead the player were encountered our unwinnable seed 18ISL35FYK4 by chance without having reached the Act I boss on their previous run, they would be offered Neow's Lament (or some extra max HP).  Our seed 18ISL35FYK4 would surely be winnable because the burning elite could be killing using the 3rd stack of Neow's Lament.  
+
+To work around this, we could run the search for a longer time to find many seeds similar to 18ISL35FYK4, and select one which cannot avoid $$3$$ combats before the fight with Lagavulin (whether this is due to the seeded RNG of ?-node outcomes or the map layout.  For example, we could find such a seed for which the ?-node outcomes are  event, event, combat, combat.  Likely this search would not take more than a week on a state-of-the-art Nvidia GPU (for compatibility with CUDA).  
+
+
+### What about other characters?  
+
+As Arbiter argued, it is likely that unwinnable seeds for Ironclad and Defect exist.  However, it is likely that a proof of unwinnability would require full combat simulation to test all possible ways to manipulate shuffle RNG and card play.  Other characters' starter decks can deal damage to Lagavulin after the 3rd turn of debuffing, and exhaustively simulating more than $$10$$ turns is likely impractical.  
+I believe that the following search criteria are likely to yield an unwinnable Ironclad seed: 
+
+1.  $$\mathcal{N}$$: transform 1 (receive an unhelpful card), 100g, 250g for any downside, and a harmful or neutral boss relic swap (Black Star, Sacred Bark, etc)
+2.  $$\mathcal{C}(3)$$: only offered draw-neutral skill cards and unhelpful powers
+3.  $$\mathcal{P}(3)$$: no potions
+4.  $$\mathcal{E}$$: first elite is **Gremlin Nob**
+5.  $$\mathcal{B}(3)$$: no shops or rest sites before a floor $$6$$ burning elite
+
+Compared to Lagavulin, Gremlin Nob... 
+- deals more damage than Lagavulin in a $$3$$-turn cycle
+- begins dealing damage on turn $$2$$ regardless of the player's decisions
+- punishes playing skill cards and severely limits deck manipulation and blocking
+- still has at least $$106$$ HP if given the max HP buff
+
+If the player draws Bash too late during the first deck shuffle and has an unfavorable reshuffle with their Strike cards, they are likely unable to survive Gremlin Nob's attack for too many turns, even if they are able to enter the fight with full HP.  
