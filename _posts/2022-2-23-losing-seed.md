@@ -10,10 +10,10 @@ In this post, I will describe how the collaborative effort that proved that unwi
 
 In a blog post on [unwinnable seeds in _Slay the Spire_](https://forgottenarbiter.github.io/Is-Every-Seed-Winnable/), ForgottenArbiter outlined a detailed approach to the problem of finding an unwinnable seed.  We take _unwinnable_ to describe any run of _Slay the Spire_ that cannot be won by any sequence of decisions allowed by the base game (ignoring glitches).  Since the random number generation of _Spire_ is determined uniquely by the run seed, the player can replay a seed, alter their card play order (and thus the outcome of later deck shuffles) slightly different, and often unintuitive orders, to maximize health and other resources throughout the run.  
 
-By analyzing card the optimal cases of card draw and deck shuffling, Arbiter proved that Silent's starting deck loses against Lagavulin on Ascension 18+, even with perfect card play and deck shuffling.  The argument completely ignores damage dealt to the player and focuses entirely on the lose condition: after 3 of Lagavulin's debuff turns (-2 dexterity and -2 strength), the player can no longer deal damage.  If the player reaches a fight against Lagavulin without improving the damage of their starter deck, they lose the run.  With this in mind, he formulated the following criteria when searching for unwinnable seeds.  
+By analyzing card the optimal cases of card draw and deck shuffling, Arbiter proved that Silent's starting deck loses against Lagavulin on Ascension $$18+$$, even with perfect card play and deck shuffling.  The argument completely ignores damage dealt to the player and focuses entirely on the lose condition: after $$3$$ of Lagavulin's debuff turns ($$-2$$ dexterity and $$-2$$ strength), the player can no longer deal damage.  If the player reaches a fight against Lagavulin without improving the damage of their starter deck, they lose the run.  With this in mind, he formulated the following criteria when searching for unwinnable seeds.  
 
-0. Play as Silent on Ascension 18 or higher.  
-1. Forced Lagavulin elite fight on floor 6, with no shops or rest sites on the first five floors.  
+0. Play as Silent on Ascension $$18$$ or higher.  
+1. Forced Lagavulin elite fight on floor $$6$$, with no shops or rest sites on the first five floors.  
 2. No Neow bonuses, potion drops, or card rewards which help the player deal damage to Lagavulin.  
 
 The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has the following properties: 
@@ -42,7 +42,7 @@ As an integer, this seed is $$3,431,382,150,268,629$$ or $$\sim 3.4$$ quadrillio
 For now, we will outline the computational effort that led to its discovery.  Scroll down further to see the proof of unwinnability.  
 
 ### BCE (Before CUDA Era)
-I first got involved in this search in early January 2022 not long after finding and routing an [Ascension 20 Heart snipe seed](https://youtu.be/8jHTNGrreTw).  I had accomplished (with glitches and some very careful RNG manipulation) the first turn-1 Heart kill since the boot bug exploited [here](https://youtu.be/4knfPJyKLYY) by ForgottenArbiter was patched.  For it, I used [gamerpuppy's sts_seed_search](https://github.com/gamerpuppy/sts_seed_search), which emulates essential seed searching functions at a low level in C++.  With this library, I am able to specify which RNG calculations I want to make, and specifically how seeds are filtered.  For speedrun-related searches in the past, I have predominantly used ForgottenArbiter's [SeedSearch](https://github.com/ForgottenArbiter/SeedSearch) mod, which runs through the backend of the base game and comes with an easy to use list of seed criteria.  
+I first got involved in this search in early January 2022 not long after finding and routing an [Ascension 20 Heart snipe seed](https://youtu.be/8jHTNGrreTw).  I had accomplished (with glitches and some very careful RNG manipulation) the first turn-$$1$$ Heart kill since the boot bug exploited [here](https://youtu.be/4knfPJyKLYY) by ForgottenArbiter was patched.  For it, I used [gamerpuppy's sts_seed_search](https://github.com/gamerpuppy/sts_seed_search), which emulates essential seed searching functions at a low level in C++.  With this library, I am able to specify which RNG calculations I want to make, and specifically how seeds are filtered.  For speedrun-related searches in the past, I have predominantly used ForgottenArbiter's [SeedSearch](https://github.com/ForgottenArbiter/SeedSearch) mod, which runs through the backend of the base game and comes with an easy to use list of seed criteria.  
 
 Like Arbiter, I prioritized Neow bonuses, card rewards, and potions first since they are relatively fast to calculate and filter seeds efficiently.  I filtered based on the floor $$0$$ rewards from Neow, rewards of $$5$$ (or sometimes $$4$$) combats, and only filtered for maps with a forced floor $$6$$ elite and no shops or rest sites beforehand.  By this point, it was clear that the order of these filters mattered.  Each filter can be evaluated in terms of its speed (how quickly it passes or rejects seeds), and its strength (how fequently it passes or rejects a seeds).  
 
@@ -79,11 +79,11 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 2. $$\mathcal{C}(5)$$: {Deflect, Prepared, Outmaneuver}, {Outmaneuver, Dodge and Roll, Blur}, {Backflip, Concentrate, Dodge and Roll}, {Concentrate, Burst, Backflip}, {Piercing Wail, Slice, Blade Dance}
 3. $$\mathcal{P}(5)$$: $$1$$ skill potion from the $$5$$-th combat (only gives Calculated Gamble, Tactician, or Setup). 
 4. $$\mathcal{E}$$ and $$\mathcal{M}$$ are met, and one of the floor $$6$$ elites is the "burning" elite.  
-4. ?-nodes: Winged Statue ($$-7$$ HP for 1 removal), Scrap Ooze ($$5$$ or $$6$$ hits for Tea Set), Wheel Gremlin (always gives $$1$$ removal), and combat. 
+4. ?-nodes: Winged Statue ($$-7$$ HP for $$1$$ removal), Scrap Ooze ($$5$$ or $$6$$ hits for Tea Set), Wheel Gremlin (always gives $$1$$ removal), and combat. 
 
 While I am optimistic that this seed is unwinnable, proving it would require fully simulating several combats.  
 
-It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only $$1$$ in $$\sim 15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only 1 in every $$~225,000$$ seeds passes through.  
+It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only $$1$$ in $$\sim 15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only $$1$$ in every $$\sim 225,000$$ seeds passes through.  
 
 After finishing a search through the first $$10$$ trillions seeds, making many adjustments along the way, it was time for a new approach.  
 
@@ -97,7 +97,7 @@ To understand the strength of the card reward filter, consider the following set
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png)
 {: refdef}
 
-With the exception of Distraction, which may give a poison or shiv-generating card, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as $$1/100$$.  With 5 card rewards potentially possible before floor 6, roughly 1 in every 10 billion seeds will have 5 consecutive bad card rewards.  On a modern GPU, hundreds of seeds pass both filters each second.  Even then, not enough seeds were passing through the remaining filters.  
+With the exception of Distraction, which may give a poison or shiv-generating card, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as $$1/100$$.  With $$5$$ card rewards potentially possible before floor $$6$$, roughly $$1$$ in every $$10$$ billion seeds will have $$5$$ consecutive bad card rewards.  On a modern GPU, hundreds of seeds pass both filters each second.  Even then, not enough seeds were passing through the remaining filters.  
 
 ### A final tradeoff
 
@@ -163,7 +163,7 @@ With more powerful seedsearching tools at our disposal, we return to some questi
 
 ### What about an unwinnable Silent seed where the player gets Neow's Lament?  
 
-As a running assumption during this project, we assumed that the unwinnable seed had to be manually entered.  A manually entered seed always offers the player 4 options from Neow on floor $$0$$.  If instead the player were encountered our unwinnable seed 18ISL35FYK4 by chance without having reached the Act I boss on their previous run, they would be offered Neow's Lament (or some extra max HP).  Our seed 18ISL35FYK4 would surely be winnable because the burning elite could be killing using the 3rd stack of Neow's Lament.  
+As a running assumption during this project, we assumed that the unwinnable seed had to be manually entered.  A manually entered seed always offers the player $$4$$ options from Neow on floor $$0$$.  If instead the player were encountered our unwinnable seed 18ISL35FYK4 by chance without having reached the Act I boss on their previous run, they would be offered Neow's Lament (or some extra max HP).  Our seed 18ISL35FYK4 would surely be winnable because the burning elite could be killing using the 3rd stack of Neow's Lament.  
 
 To work around this, we could run the search for a longer time to find many seeds similar to 18ISL35FYK4, and select one which cannot avoid $$3$$ combats before the fight with Lagavulin (whether this is due to the seeded RNG of ?-node outcomes or the map layout.  For example, we could find such a seed for which the ?-node outcomes are  event, event, combat, combat.  Likely this search would not take more than a week on a state-of-the-art Nvidia GPU (for compatibility with CUDA).  
 
@@ -181,8 +181,10 @@ As Arbiter argued, it is likely that unwinnable seeds for Ironclad and Defect ex
 Compared to Lagavulin, Gremlin Nob... 
 - deals more damage than Lagavulin in a $$3$$-turn cycle, 
 - begins dealing damage on turn $$2$$ regardless of the player's decisions, 
-- penalizes playing skill cards and severely limits deck manipulation and blocking, and 
+- penalizes playing skill cards and severely limits deck manipulation and blocking, 
 - still has at least $$106$$ HP if given the max HP buff.  
+
+Additionally, fights against Gremlin Nob typically last fewer turns than both Lagavulin and Three Sentries and are thus easier to simulate.  
 
 If the player draws Bash too late during the first deck shuffle and has an unfavorable reshuffle with their Strike cards, they are likely unable to survive Gremlin Nob's attack for too many turns, even if they are able to enter the fight with full HP ($$80$$).  Unmitigated, Gremlin Nob deals a minimum of $$88$$ damage in the first $$6$$ turns.  
 
