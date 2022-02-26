@@ -63,7 +63,7 @@ $$
 Reversing the filter order exchanges $$s,t$$ and $$p,q$$ in this expression.  In order to minimize the average time spent testing each seed, the optimal filter order can be found by the following calculation: 
 
 {:refdef: style="text-align: center;"}
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/filter-efficiency.png){:height="654px" width="92px"}
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/filter-efficiency.png){:height="92px" width="654px"}
 {: refdef}
 
 These fractional expressions can be thought of as a measure of the _efficiency_ of the filter $$\mathcal{F}$$, under a minor concentration hypothesis.  When $$p$$ is small, the denominator term vanishes (as is the case with map filtering, only the time spent on the filter matters.  Following some experiments, we arrive at the following order on the filters: 
