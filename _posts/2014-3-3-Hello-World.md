@@ -5,7 +5,7 @@ published: true
 ---
 
 ## Overview
-In this post, I will describe how [gamerpuppy](https://github.com/gamerpuppy) and I found an unwinnable _Slay the Spire_ seed and, jointly with [ForgottenArbiter](https://forgottenarbiter.github.io/), find a simple simple proof of unwinnability.  This work is based on the several attempts that have been made to prove unwinnable seeds exist in _Spire_ and would not have been possible without this work and much collaboration.  
+In this post, I will describe how we found a [gamerpuppy](https://github.com/gamerpuppy) and I found an unwinnable _Slay the Spire_ seed and, jointly with [ForgottenArbiter](https://forgottenarbiter.github.io/), find a simple simple proof of unwinnability.  This work is based on the several attempts that have been made to prove unwinnable seeds exist in _Spire_ and would not have been possible without this work and helpful discussion.  
 
 ## Previous progress
 
@@ -66,7 +66,7 @@ Reversing the filter order exchanges $$s,t$$ and $$p,q$$ in this expression.  In
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/filter-efficiency.png){:height="46px" width="327px"}
 {: refdef}
 
-These fractional expressions can be thought of as a measure of the _efficiency_ of the filter $$\mathcal{F}$$, under a minor concentration hypothesis.  When $$p$$ is small, the denominator term vanishes (as is the case with map filtering, only the time spent on the filter matters.  Following some experiments, we arrive at the following order on the filters: 
+These fractional expressions can be thought of as a measure of the _efficiency_ of the filter $$\mathcal{F}$$, under a minor concentration hypothesis.  When $$p$$ is small, the denominator term is arbitrarily close to $$1$$ (as is the case with map filtering), and only the time spent on the filter matters.  Following some experiments, we arrive at the following order on the filters: 
 
 1. $$\mathcal{N}:$$ the floor $$0$$ rewards from Neow are "unhelpful".  
 2. $$\mathcal{C}(5):$$ the first $$5$$ card rewards do not adequately augment Silent's damage output.  
@@ -74,7 +74,7 @@ These fractional expressions can be thought of as a measure of the _efficiency_ 
 4. $$\mathcal{E}:$$ Lagavulin is the first elite fought.  
 5. $$\mathcal{M}:$$ no shops or rest sites appear before floor $$6$$, and floor $$6$$ only has elite fights.  
 
-For other considerations such as ?-nodes outcomes and boss relic swaps, we print out some information on each seed that passes filters $$1$$ through $$5$$, and test everything else manually.  Adjusting my search parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which meets the above properties.  More precisely: 
+For other considerations such as ?-nodes outcomes and boss relic swaps, we print out some information on each seed that passes filters $$1$$ through $$5$$, and test everything else manually, or with Arbiter's SeedSearch.  Adjusting parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which meets the above properties.  More precisely: 
 
 1. $$\mathcal{N}$$: $$1$$ removal, $$100$$g, and $$250$$g for some max HP, or swap into Black Star.  
 2. $$\mathcal{C}(5)$$: {Deflect, Prepared, Outmaneuver}, {Outmaneuver, Dodge and Roll, Blur}, {Backflip, Concentrate, Dodge and Roll}, {Concentrate, Burst, Backflip}, {Piercing Wail, Slice, Blade Dance}
