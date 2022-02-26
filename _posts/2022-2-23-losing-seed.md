@@ -194,4 +194,4 @@ Watcher is highly regarded as the strongest of the $$4$$ characters in _Slay the
 
 On the other hand, if the player is unable to play $$2$$ Strikes during this time, this amount is reduced to $$99$$, which is less than the minimum HP of a HP-buffed Gremlin Nob.  Remaining in Wrath stance also poses a significant constraint on the player.  If the player is in Wrath during a $$3$$-attack cycle, then Gremlin Nob's attacks during this time total $$112$$ damage, which eclipses Watcher's starting max HP of $$72$$.  
 
-I believe that an unwinnable Watcher seed may be found and proven in our lifetime, with the aid of a combat simulator.  
+I am optimistic that an unwinnable Watcher seed may be found and proven in our lifetime, with the aid of a combat simulator.  
