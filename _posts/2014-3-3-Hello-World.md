@@ -63,7 +63,7 @@ $$
 Reversing the filter order exchanges $$s,t$$ and $$p,q$$ in this expression.  In order to minimize the average time spent testing each seed, the optimal filter order can be found by the following calculation: 
 
 {:refdef: style="text-align: center;"}
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/filter-efficiency.png)
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/filter-efficiency.png){:height="654px" width="92px"}
 {: refdef}
 
 These fractional expressions can be thought of as a measure of the _efficiency_ of the filter $$\mathcal{F}$$, under a minor concentration hypothesis.  When $$p$$ is small, the denominator term vanishes (as is the case with map filtering, only the time spent on the filter matters.  Following some experiments, we arrive at the following order on the filters: 
@@ -95,7 +95,7 @@ After several helpful conversations with gamerpuppy, they sent me a version of t
 To understand the strength of the card reward filter, consider the following set of "unhelpful" Silent cards: 
 
 {:refdef: style="text-align: center;"}
-![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png){:height="528px" width="567px"}
+![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png)
 {: refdef}
 
 With the exception of Distraction, which may give a poison or shiv-generating card, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as $$1/100$$.  With 5 card rewards potentially possible before floor 6, roughly 1 in every 10 billion seeds will have 5 consecutive bad card rewards.  On a modern GPU, hundreds of seeds pass both filters each second.  Even then, not enough seeds were passing through the remaining filters.  
