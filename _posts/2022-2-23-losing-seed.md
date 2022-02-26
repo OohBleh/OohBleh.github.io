@@ -65,7 +65,7 @@ Reversing the filter order exchanges $$s,t$$ and $$p,q$$ in this expression.  In
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/filter-efficiency.png){:height="46px" width="327px"}
 {: refdef}
 
-These fractional expressions can be thought of as a measure of the _efficiency_ of the filter $$\mathcal{F}$$, under a minor concentration hypothesis.  When $$p$$ is small, the denominator term is arbitrarily close to $$1$$ (as is the case with map filtering), and only the time spent on the filter matters.  Following some experiments, we arrive at the following order on the filters: 
+These fractional expressions can be thought of as measures of the _efficiency_ of the filters $$\mathcal{F}$$ and $$\mathcal{G}$$, under a minor concentration hypothesis.  When $$p$$ is small, the denominator term is arbitrarily close to $$1$$ (as is the case with map filtering), and only the time spent on the filter matters.  Following some experiments, we arrive at the following order on the filters: 
 
 1. $$\mathcal{N}:$$ the floor $$0$$ rewards from Neow are "unhelpful".  
 2. $$\mathcal{C}(5):$$ the first $$5$$ card rewards do not adequately augment Silent's damage output.  
