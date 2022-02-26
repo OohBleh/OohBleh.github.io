@@ -181,9 +181,9 @@ I believe that the following search criteria are likely to yield an unwinnable I
 5.  $$\mathcal{B}(3)$$: no shops or rest sites before a floor $$6$$ burning elite
 
 Compared to Lagavulin, Gremlin Nob... 
-- deals more damage than Lagavulin in a $$3$$-turn cycle
-- begins dealing damage on turn $$2$$ regardless of the player's decisions
-- punishes playing skill cards and severely limits deck manipulation and blocking
-- still has at least $$106$$ HP if given the max HP buff
+- deals more damage than Lagavulin in a $$3$$-turn cycle, 
+- begins dealing damage on turn $$2$$ regardless of the player's decisions, 
+- penalizes playing skill cards and severely limits deck manipulation and blocking, and 
+- still has at least $$106$$ HP if given the max HP buff.  
 
 If the player draws Bash too late during the first deck shuffle and has an unfavorable reshuffle with their Strike cards, they are likely unable to survive Gremlin Nob's attack for too many turns, even if they are able to enter the fight with full HP.  
