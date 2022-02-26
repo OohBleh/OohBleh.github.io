@@ -46,7 +46,7 @@ I first got involved in this search in early January 2022 not long after finding
 
 I filtered based on the floor $$0$$ rewards from Neow, rewards of $$5$$ (or sometimes $$4$$) combats, and only filtered for maps with a forced floor $$6$$ elite and no shops or rest sites beforehand.  The filter order has a large impact on the rate at which seeds are tested.  
 
-Suppose we have two filters $$\mathcal{F},\mathcal{G}$$ which independent in usual probabilistic sense.  If $$s,t$$ are good estimates for the times spend testing a seed against $$\mathcal{F},\mathcal{G}$$, and $$p,q$$ are the probabilities of a seed passing the filters, respectively, then the expected time to test a seed against $$\mathcal{F}$$, and then $$\mathcal{G}$$ is 
+Suppose we have two filters $$\mathcal{F},\mathcal{G}$$ which independent in an appropriate probabilistic sense.  If $$s,t$$ are good estimates for the times spend testing a seed against $$\mathcal{F},\mathcal{G}$$, and $$p,q$$ are the probabilities of a seed passing the filters, respectively, then the expected time to test a seed against $$\mathcal{F}$$, and then $$\mathcal{G}$$ is 
 
 {:refdef: style="text-align: center;"}
 $$
