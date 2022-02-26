@@ -186,4 +186,4 @@ Compared to Lagavulin, Gremlin Nob...
 - penalizes playing skill cards and severely limits deck manipulation and blocking, and 
 - still has at least $$106$$ HP if given the max HP buff.  
 
-If the player draws Bash too late during the first deck shuffle and has an unfavorable reshuffle with their Strike cards, they are likely unable to survive Gremlin Nob's attack for too many turns, even if they are able to enter the fight with full HP ($$80$$).  Unmitigated, Gremlin Nob deals a minimum of $$88$$ damage in the first $$6$$ turns.  
+If the player draws Bash too late during the first deck shuffle and has an unfavorable reshuffle with their Strike cards, they are likely unable to survive Gremlin Nob's attack for too many turns, even if they are able to enter the fight with full HP ($$80$$).  Unmitigated, Gremlin Nob deals a minimum of $$88$$ damage in the first $$6$$ turns.
