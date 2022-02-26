@@ -68,7 +68,7 @@ Reversing the filter order exchanges $$s,t$$ and $$p,q$$ in this expression.  In
 
 These fractional expressions can be thought of as a measure of the _efficiency_ of the filter $$\mathcal{F}$$, under a minor concentration hypothesis.  When $$p$$ is small, the denominator term vanishes (as is the case with map filtering, only the time spent on the filter matters.  Following some experiments, we arrive at the following order on the filters: 
 
-1. $$\mathcal{N}:$$ the floor $$0$$ rewards from Neow are "bad".  
+1. $$\mathcal{N}:$$ the floor $$0$$ rewards from Neow are "unhelpful".  
 2. $$\mathcal{C}(5):$$ the first $$5$$ card rewards do not adequately augment Silent's damage output.  
 3. $$\mathcal{P}(5):$$ the potions offered from the first $$5$$ combats also do not augment damage output.  
 4. $$\mathcal{E}:$$ Lagavulin is the first elite fought.  
