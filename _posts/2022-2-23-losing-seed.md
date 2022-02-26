@@ -4,7 +4,7 @@ title: An extremely unwinnable Slay the Spire seed
 published: true
 ---
 ## Overview
-In this post, I will describe how we found a [gamerpuppy](https://github.com/gamerpuppy) and I found an unwinnable _Slay the Spire_ seed and, jointly with [ForgottenArbiter](https://forgottenarbiter.github.io/), find a simple simple proof of unwinnability.  This work is based on the several attempts that have been made to prove unwinnable seeds exist in _Spire_ and would not have been possible without this work and helpful discussion.  
+In this post, I will describe how the collaborative effort that proved that unwinnable _Slay the Spire_ seeds exist.  This project is a collaboration with [gamerpuppy](https://github.com/gamerpuppy) and [ForgottenArbiter](https://forgottenarbiter.github.io/) and is based on the several attempts that have been made to prove unwinnability for seeds in _Slay the Spire_.  
 
 ## Previous progress
 
