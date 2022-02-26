@@ -59,7 +59,7 @@ $$
 $$
 {: refdef}
 
-Reversing the filter order exchanges $$s,t$$ and $$p,q$$ in this expression.  In order to minimize the average time spent testing each seed, the optimal filter order can be found by the following calculation: 
+Reversing the filter order exchanges $$s,t$$ and $$p,q$$ in this expression.  In order to minimize the average time spent testing each seed, the optimal filter order can be found by the following observation: 
 
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/filter-efficiency.png){:height="46px" width="327px"}
