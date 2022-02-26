@@ -126,7 +126,7 @@ The following argument was suggested to me by Arbiter.  To prove that $$\mathcal
 For convenience, let $$k$$ be the combined number of copies of Escape Plan and Prepared in the player's deck.  We state and prove the following claims about combat on floor $$6$$.  
 
 
-**Claim B.0**.  The earliest deck shuffle occurs at the start of turn $$1$$ and the next deck shuffle occurs, at the earliest, at the start of turn $$2$$.  
+**Claim B.0**.  The first deck shuffle occurs at the start of turn $$1$$ and the next deck shuffle occurs, at the earliest, at the start of turn $$2$$.  
 
 Since Silent's deck begins with 12 basic cards and Ascender's Bane, and by floor $$6$$, only $$2$$ card removals are possible, the player's deck has at least $$11+k$$ cards.  Furthermore, noting the relics available, at most $$7+k$$ cards are drawn on turn $$1$$.  So no other shuffle occurs during turn $$1$$, completing the proof.  
 
@@ -143,10 +143,10 @@ Since the player has at most $$5$$ cards in-hand at the start of turn $$t$$, the
 As before, note that the combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Note also that the player has at most $$5$$ cards in-hand just before this shuffle, and at least one of these cards is a draw card.  It follows that turn $$t$$ ends with one draw card and at most $$5$$ non-draw cards in the discard pile.  This implies that the draw pile consists of at least $$10-5 = 5$$ non-draw cards at the end of turn $$t$$.  So no other shuffle occurs during turns $$t$$ and $$t+1$$, as desired.  
 
 
-**Claim C**.  Suppose the player shuffles the deck on turn $$s$$.  In the time after this shuffle, but before the next shuffle, the player's damage output is bounded above by the damage dealt with the following sequence of card plays: 
+**Claim C**.  Suppose the player shuffles the deck on turn $$t$$.  In the time after this shuffle, but before the next shuffle, the player's damage output is bounded above by the damage dealt with the following sequence of card plays: 
 
-- play $$5$$ Strikes and $$1$$ Neutralize on turn $$s$$ if $$s = 1$$, and 
-- play $$5$$ Strikes on turn $$s$$ and $$1$$ Neutralize on turn $$s+1$$.  
+- play $$5$$ Strikes and $$1$$ Neutralize on turn $$t$$ if $$t = 1$$, and 
+- play $$5$$ Strikes on turn $$t$$ and $$t$$ Neutralize on turn $$t+1$$.  
 
 Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand, and thus can be played, at most once.  Starting from turn $$2$$ or higher, at most $$5$$ of these cards can be played on a given turn, and playing the Strikes on the earliest possible turn deals more damage.  
 
@@ -155,7 +155,7 @@ To complete the proof, consider the sequence $$1 = t(1)\leq t(2)\leq \cdots$$ of
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
-Since Lagavulin's total HP equals 144, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension 18 or higher.  
+Since Lagavulin's total HP equals 145, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension 18 or higher.  
 
 ## Future work
 
