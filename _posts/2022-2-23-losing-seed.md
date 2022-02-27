@@ -208,10 +208,10 @@ If the player draws Bash too late during the first deck shuffle and has an unfav
 
 For a similar reason, the Defect may also be unable to survive an unfavorable combat against a buffed Gremlin Nob.  
 
-#### Even Watcher?  
+### Even Watcher?  
 
 Watcher is highly regarded as the strongest of the $$4$$ characters in _Slay the Spire_.  With her starting deck alone, the player can deal $$123$$ damage during the first $$2$$ cycles through the deck.  This exceeds the maximum base HP of Gremlin Nob and Lagavulin, and sometimes can kill all $$3$$ Sentries.  
 
 On the other hand, if the player is unable to play $$2$$ Strikes during this time, this amount is reduced to $$99$$, which is less than the minimum HP of a HP-buffed Gremlin Nob.  Remaining in wrath stance also poses a significant constraint on the player.  If the player is in wrath during a $$3$$-attack cycle, then, unmitigated, Gremlin Nob's attacks during this time total a minimum $$112$$ damage, which eclipses Watcher's starting HP of $$61$$ (Ascension $$14+$$), and the lesser of these two attacks totals $$64$$ damage.  
 
-How many of Watcher's skill and power cards are helpful in this particular fight?  While the answer is probably "many", I do not believe it is "all".  I am optimistic that even an unwinnable Watcher seed may be found and proven, with the aid of a moderately optimized, RNG-accurate combat simulator.
+How many of Watcher's skill and power cards are helpful in this particular fight?  While the answer is probably "many", I do not believe it is "all".  I am optimistic that even an unwinnable Watcher seed could be found in a few days of searching, and proven, with the aid of a moderately optimized, RNG-accurate combat simulator.  
