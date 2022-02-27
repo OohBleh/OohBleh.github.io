@@ -35,7 +35,7 @@ For example, it is possible to reach Lagavulin with a deck which draws as follow
 - Footwork, Neutralize, Ascender's Bane, Defend, Strike, 
 - Defend, Strike, Strike, Outmaneuver, _shuffle..._
 
-Depending on the order in which cards can be played on subsequent turns, then it has been shown that with perfect shuffle on future turns, the player is able to deal exactly $$113$$ damage to Lagavulin (which starts with $$112$$ HP) before the debuffs reduce all damage to $$0$$.  With access to mid-turn deck shuffling from Adrenaline as well, this becomes much more difficult to analyze.  $
+By playing cards in a different order, the player controls the order of cards in their draw pile, and thus can manipulate how they are shuffled in the next deck cycle.  It has been shown that with perfect shuffle on future turns, then with this deck, the player is able to deal exactly $$113$$ damage to Lagavulin (which starts with $$112$$ HP) before the debuffs reduce all damage to $$0$$.  Whether this shuffle can be realized by the game's RNG has not been determined.  With access to mid-turn deck shuffling from Adrenaline as well, this becomes much more difficult to analyze.  
 
 ## The hunt for an abomination: 18ISL35FYK4
 
