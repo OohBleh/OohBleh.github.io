@@ -19,15 +19,14 @@ By analyzing card the optimal cases of card draw and deck shuffling, Arbiter pro
 The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has the following properties: 
 
 1. Neow Options: upgrade a card, $$100$$, remove $$2$$ Cards (take $$15$$ damage), swap for Cursed Key
-2. Card rewards before floor $$6$$: 
-    - {Bane, Outmaneuver, Deflect}, 
-    - {Outmaneuver, Accuracy, Footwork}, 
-    - {Deflect, Outmaneuver, Setup}, and 
+2. Card and potions before floor $$6$$: 
+    - {Bane, Outmaneuver, Deflect}
+    - {Outmaneuver, Accuracy, Footwork} and Essence of Steel] 
+    - {Deflect, Outmaneuver, Setup} and Fruit Juice
     - {Dodge and Roll, Accuracy, Tactician}.  
-3.  Potions available: Essence of Steel, Fruit Juice.  
-4.  Lagavulin is the first elite.  
-5.  Forced burning elite (with the metallicizing buff) on floor $$6$$ with no shops or rest sites beforehand.  
-6.  ?-nodes are useless except for a possibly useful card transform (Adrenaline, etc).  
+3.  Lagavulin is the first elite.  
+4.  Forced burning elite (with the metallicizing buff) on floor $$6$$ with no shops or rest sites beforehand.  
+5.  ?-nodes are useless except for a possibly useful card transform (Adrenaline, etc).  
 
 It is likely that this seed is unwinnable.  However, it can not be ruled out as winnable without detailed information about the shuffle RNG of the fight against Lagavulin.  In _Slay the Spire_, the random number generator which controls shuffle is instantiated at the start of each combat, and it depends only seed and the floor number.  By playing cards in a different order on the first cycle through the deck, the player can manipulate the order in which cards are drawn on later cycles.  
 
