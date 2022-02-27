@@ -94,7 +94,7 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 - {Outmaneuver, Dodge and Roll, Blur}, 
 - {Backflip, Concentrate, Dodge and Roll}, 
 - {Concentrate, Burst, Backflip}, and 
-{Piercing Wail, Slice, Blade Dance}.  
+- {Piercing Wail, Slice, Blade Dance}.  
 3. $$\mathcal{P}(5)$$: $$1$$ skill potion from the $$5$$-th combat (always {Calculated Gamble, Tactician, Setup}). 
 4. $$\mathcal{E}$$ and $$\mathcal{M}$$ are met, and one of the floor $$6$$ elites is the "burning" elite.  
 4. ?-nodes: Winged Statue ($$-7$$ HP for $$1$$ removal), Scrap Ooze ($$5$$ or $$6$$ hits for Tea Set), Wheel Gremlin (always gives $$1$$ removal), and combat. 
