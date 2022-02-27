@@ -165,7 +165,7 @@ As before, note that the combined number of cards in the player's hand, discard 
 **Claim C**.  Suppose the player shuffles the deck on turn $$t$$.  In the time after this shuffle, but before the next shuffle, the player's damage output is bounded above by the damage dealt with the following sequence of card plays: 
 
 - play $$5$$ Strikes and $$1$$ Neutralize on turn $$t$$ if $$t = 1$$, and 
-- play $$5$$ Strikes on turn $$t$$ and $$t$$ Neutralize on turn $$t+1$$.  
+- play $$5$$ Strikes on turn $$t$$ and $$1$$ Neutralize on turn $$t+1$$.  
 
 Indeed, during this time, each damage card (at most $$5$$ Strikes and $$1$$ Neutralize) enters the player's hand, and thus can be played, at most once.  Starting from turn $$2$$ or higher, at most $$5$$ of these cards can be played on a given turn, and playing the Strikes on the earliest possible turn deals more damage.  
 
