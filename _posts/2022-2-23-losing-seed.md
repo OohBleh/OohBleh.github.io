@@ -35,7 +35,7 @@ For example, it is possible to reach Lagavulin with a deck which draws as follow
 - Footwork, Neutralize, Ascender's Bane, Defend, Strike, 
 - Defend, Strike, Strike, Outmaneuver, _shuffle..._
 
-Depending on the order in which cards can be played on subsequent turns, then it has been shown that with perfect shuffle on future turns, the player is able to deal exactly $$113$$ damage to Lagavulin (which starts with $$112$$ HP) before the debuffs reduce all damage to $$0$$.  With access to mid-turn deck shuffling from Adrenaline as well, this becomes much more difficult to analyze.  
+Depending on the order in which cards can be played on subsequent turns, then it has been shown that with perfect shuffle on future turns, the player is able to deal exactly $$113$$ damage to Lagavulin (which starts with $$112$$ HP) before the debuffs reduce all damage to $$0$$.  With access to mid-turn deck shuffling from Adrenaline as well, this becomes much more difficult to analyze.  $
 
 ## The hunt for an abomination: 18ISL35FYK4
 
@@ -135,7 +135,7 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629$$ (also known as 18ISL35FYK4}.  We l
 3.  The first 3 combats rewards before Lagavulin are: 
    - {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
    - {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
-   - ${Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
+   - {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
 4.  Each path to floor $$6$$ encounters either $$2$$ combats and $$3$$ ?-nodes, or 3 combats and $$2$$ ?-nodes.  
 5.  The only map node on floor $$6$$ is an elite combat aganist Lagavulin with $$145$$ HP.  
 
