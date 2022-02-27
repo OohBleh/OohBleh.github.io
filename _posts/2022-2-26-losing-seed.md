@@ -47,9 +47,9 @@ The goal of my search was to find a seed so heinous that the proof of unwinnabil
 
 As an integer, this seed is $$3,431,382,150,268,629$$ or $$\sim 3.4$$ quadrillion, but we make no claim that this is the first unwinnable seed.  This seed has the following properties: 
 
-1. Neow only offers $$1$$ removal, $$100$$g, $$250$$g for some max HP, or a swap into Cursed Key.  
+1. Neow only offers $$1$$ removal, gold, or a swap into Cursed Key.  
 2. The map forces a burning elite fight (max HP Lagavulin) on floor $$6$$ with no shops or rest sites beforehand.  
-3. The player encounters either $$2$$ or $$3$$ combats beforehand and the ?-nodes only give $$1$$ removal.  
+3. The player encounters $$2$$ or $$3$$ combats and the ?-nodes are mostly unhelpful.  
 4. The cards offered do not directly add any damage and are draw-neutral.  
 
 For now, we will outline the computational effort that led to its discovery.  Scroll down further to see the proof of unwinnability.  
