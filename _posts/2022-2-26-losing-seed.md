@@ -209,10 +209,25 @@ If the player draws Bash too late during the first deck shuffle and has an unfav
 
 For a similar reason, the Defect may also be unable to survive an unfavorable combat against a buffed Gremlin Nob.  
 
-### Even Watcher?  
+### What about Watcher?  
 
 Watcher is highly regarded as the strongest of the $$4$$ characters in _Slay the Spire_.  With her starting deck alone, the player can deal $$123$$ damage during the first $$2$$ cycles through the deck.  This exceeds the maximum base HP of Gremlin Nob and Lagavulin, and sometimes can kill all $$3$$ Sentries.  
 
 On the other hand, if the player is unable to play $$2$$ Strikes during this time, this amount is reduced to $$99$$, which is less than the minimum HP of a HP-buffed Gremlin Nob.  Remaining in wrath stance also poses a significant constraint on the player.  If the player is in wrath during a $$3$$-attack cycle, then, unmitigated, Gremlin Nob's attacks during this time total a minimum $$112$$ damage, which eclipses Watcher's starting HP of $$61$$ (Ascension $$14+$$), and the lesser of these two attacks totals $$64$$ damage.  
 
 How many of Watcher's skill and power cards are helpful in this particular fight?  While the answer is probably "many", I do not believe it is "all".  I am optimistic that even an unwinnable Watcher seed could be found in a few days of searching, and proven, with the aid of a moderately optimized, RNG-accurate combat simulator.
+
+### Are there unwinnable runs with glitches?  
+
+If you watched [_Slay the Spire_ at AGDQ 2022](https://youtu.be/Q7FlPBFKX_Q) or have otherwise seen some _Slay the Spire_ speedrunning, you probably know that this game has [a lot of glitches](https://docs.google.com/spreadsheets/d/101K_6xxDjQH2caGApCMxgrybOScGw0VRwd5C-qYl0tA/).  Using a variety of different node entry manipulation glitches, the player can: 
+
+1. (double node) enter $$2$$ or more map nodes on the same floor, 
+2. (node dupe) enter the same map node twice, 
+3. (node reroll) change the combat in a duplicated combat node, and 
+4. (node ladder) climb the map on multiple pathes at once.  
+
+By node glitches alone, the player significantly increases their chance of accessing damage-dealing cards, deck manipulation, potions, card removals, card upgrades, and shops from ?-nodes.  While it may be possible to contrive scenarios for unwinnable glitched runs, they are necessarily more scarce by several orders of magnitude.  For example, by duplicating combats, the player can turn a $$3$$-combat path into one with $$5$$ or even $$6$$ combats before the burning elite.  By visiting additional map nodes, the player also changes the floor number during the burning elite fight, and can improve their deck manipulation in this fashion.  
+
+I doubt such a seed exists.  If one does, it is unclear how one would find it, let alone prove it is unwinnable.  
+
+That it has taken $$3$$ years since the game's main release (and over $$4$$ years since it was released for early access) to find and prove seed unwinnability is a testament to the beauty of _Slay the Spire_'s design.  How far this project is an ongoing challenge and I invite any interested programmer to join in.  
