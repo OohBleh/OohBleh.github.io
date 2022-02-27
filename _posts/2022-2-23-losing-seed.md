@@ -49,7 +49,7 @@ As an integer, this seed is $$3,431,382,150,268,629$$ or $$\sim 3.4$$ quadrillio
 
 1. Neow only offers $$1$$ removal, $$100$$g, $$250$$g for some max HP, or a swap into Cursed Key.  
 2. The map forces a burning elite fight (max HP Lagavulin) on floor $$6$$ with no shops or rest sites beforehand.  
-3. The player encounters either $$2$$ or $$3$$ combats beforehand and the events only give $$1$$ removal.  
+3. The player encounters either $$2$$ or $$3$$ combats beforehand and the ?-nodes only give $$1$$ removal.  
 4. The cards offered do not directly add any damage and are draw-neutral.  
 
 For now, we will outline the computational effort that led to its discovery.  Scroll down further to see the proof of unwinnability.  
@@ -181,7 +181,7 @@ With more powerful seedsearching tools at our disposal, we return to some questi
 
 ### What if the player gets Neow's Lament?  
 
-As a running assumption during this project, we assumed that the unwinnable seed had to be manually entered.  A manually entered seed always offers the player $$4$$ options from Neow on floor $$0$$.  If instead the player were encountered our unwinnable seed 18ISL35FYK4 by chance without having reached the Act I boss on their previous run, they would be offered Neow's Lament (or some extra max HP).  Our seed 18ISL35FYK4 would surely be winnable because the burning elite could be killing using the 3rd stack of Neow's Lament.  
+As a running assumption during this project, we assumed that the unwinnable seed had to be manually entered.  A manually entered seed always offers the player $$4$$ options from Neow on floor $$0$$.  If instead the player were encountered our unwinnable seed 18ISL35FYK4 by chance without having reached the Act I boss on their previous run, they would be offered Neow's Lament (or some extra max HP).  Our seed 18ISL35FYK4 would surely be winnable because the burning elite could be killing using the $$3$$-rd stack of Neow's Lament.  
 
 To work around this, we could run the search for a longer time to find many seeds similar to 18ISL35FYK4, and select one which cannot avoid $$3$$ combats before the fight with Lagavulin (whether this is due to the seeded RNG of ?-node outcomes or the map layout.  For example, we could find such a seed for which the ?-node outcomes are  event, event, combat, combat.  Likely this search would not take more than a week on a state-of-the-art Nvidia GPU (for compatibility with CUDA).  
 
