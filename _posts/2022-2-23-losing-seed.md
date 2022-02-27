@@ -18,9 +18,15 @@ By analyzing card the optimal cases of card draw and deck shuffling, Arbiter pro
 
 The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has the following properties: 
 
-1. Neow
-2. cards and potions
-3. burning Laga
+1. Neow Options: upgrade a card, $$100$$, remove $$2$$ Cards (take $$15$$ damage), swap for Cursed Key
+2. Card rewards before floor $$6$$: 
+    - {Bane, Outmaneuver, Deflect}, 
+    - {Outmaneuver, Accuracy, Footwork}, 
+    - {Deflect, Outmaneuver, Setup}, and 
+    - {Dodge and Roll, Accuracy, Tactician}.  
+3.  Potions available: Essence of Steel, Fruit Juice.  
+4.  Lagavulin is the first elite.  
+5.  Forced burning elite on floor $$6$$ with no shops or rest sites beforehand.  
 
 Unfortunately, due to the added card draw, there are decks that can be drafted by floor 6 that, with perfect shuffle RNG, can survive the fight.  For example, with a deck of blah, the following sequence of cards played can survive the fight, if realizable: blah.  The seed is believed by many to be unwinnable, but proving it would likely require simulating the fight with Lagavulin and checking all sequences of card plays for optimal shuffle manipulation.  
 
@@ -196,4 +202,4 @@ Watcher is highly regarded as the strongest of the $$4$$ characters in _Slay the
 
 On the other hand, if the player is unable to play $$2$$ Strikes during this time, this amount is reduced to $$99$$, which is less than the minimum HP of a HP-buffed Gremlin Nob.  Remaining in Wrath stance also poses a significant constraint on the player.  If the player is in Wrath during a $$3$$-attack cycle, then, unmitigated, Gremlin Nob's attacks during this time total a minimum $$112$$ damage, which eclipses Watcher's starting HP of $$61$$ (Ascension $$14+$$), and the lesser of these two attacks totals $$64$$ damage.  
 
-How many of Watcher's skill and power cards are similarly unhelpful in this scenario?  While the answer is probably "many", I do not believe it is "all".  I am optimistic that even an unwinnable Watcher seed may be found and proven, with the aid of a moderately optimized, RNG-compliant combat simulator.
+How many of Watcher's skill and power cards are unhelpful in this particular fight?  While the answer is probably "many", I do not believe it is "all".  I am optimistic that even an unwinnable Watcher seed may be found and proven, with the aid of a moderately optimized, RNG-compliant combat simulator.
