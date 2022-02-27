@@ -21,9 +21,9 @@ The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has
 1. Neow Options: upgrade a card, $$100$$, remove $$2$$ Cards (take $$15$$ damage), swap for Cursed Key
 2. Card and potions before floor $$6$$: 
     - {Bane, Outmaneuver, Deflect}
-    - {Outmaneuver, Accuracy, Footwork} and Essence of Steel] 
+    - {Outmaneuver, Accuracy, Footwork} and Essence of Steel
     - {Deflect, Outmaneuver, Setup} and Fruit Juice
-    - {Dodge and Roll, Accuracy, Tactician}.  
+    - {Dodge and Roll, Accuracy, Tactician} 
 3.  Lagavulin is the first elite.  
 4.  Forced burning elite (with the metallicizing buff) on floor $$6$$ with no shops or rest sites beforehand.  
 5.  ?-nodes are useless except for a possibly useful card transform (Adrenaline, etc).  
