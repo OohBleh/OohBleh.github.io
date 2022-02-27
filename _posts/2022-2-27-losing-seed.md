@@ -233,4 +233,4 @@ I doubt such a seed exists.  If one does, it is unclear how one would find it, l
 
 ## Final remarks
 
-That it has taken $$3$$ years since the game's main release (and over $$4$$ years since it was released for early access) to find and prove seed unwinnability is a testament to the strength of _Slay the Spire_'s balance and design.  How much further can we go?  I do not know, but I invite any interested programmer to get in touch by email (see main blog page) or other platforms and join the fun.  
+That it has taken $$3$$ years since the game's main release (and over $$4$$ years since it was released for early access) to find and prove seed unwinnability is a testament to the strength of _Slay the Spire_'s balance and design.  How much further can we go?  I do not know, but I invite any interested programmer to check out the [C++](https://github.com/gamerpuppy/sts_seed_search) and [CUDA](https://github.com/OohBleh/cuda-the-spire) code.  Don't be afraid to get in touch (see main blog page for contact info) and join the fun.  
