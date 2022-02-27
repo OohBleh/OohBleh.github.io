@@ -109,7 +109,7 @@ After finishing a search through the first $$10$$ trillions seeds, making many a
 
 After several helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational capability, allowing for simultaneous computation with tens of thousands of [threads](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)), if ran on a state-of-the-art GPU.  To optimize performance, we feed in the most efficient constraints into CUDA: $$\mathcal{N}$$ and $$\mathcal{C}(5)$$.  Any seeds that pass these filters get written to a text file which can later be fed through the C++ program for further analysis.  
 
-To understand the strength of the card reward filter, consider the following set of "unhelpful" Silent cards: 
+To understand the strength of the card reward filter, consider the following set of Silent cards: 
 
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png)
@@ -214,4 +214,4 @@ Watcher is highly regarded as the strongest of the $$4$$ characters in _Slay the
 
 On the other hand, if the player is unable to play $$2$$ Strikes during this time, this amount is reduced to $$99$$, which is less than the minimum HP of a HP-buffed Gremlin Nob.  Remaining in wrath stance also poses a significant constraint on the player.  If the player is in wrath during a $$3$$-attack cycle, then, unmitigated, Gremlin Nob's attacks during this time total a minimum $$112$$ damage, which eclipses Watcher's starting HP of $$61$$ (Ascension $$14+$$), and the lesser of these two attacks totals $$64$$ damage.  
 
-How many of Watcher's skill and power cards are helpful in this particular fight?  While the answer is probably "many", I do not believe it is "all".  I am optimistic that even an unwinnable Watcher seed could be found in a few days of searching, and proven, with the aid of a moderately optimized, RNG-accurate combat simulator.  
+How many of Watcher's skill and power cards are helpful in this particular fight?  While the answer is probably "many", I do not believe it is "all".  I am optimistic that even an unwinnable Watcher seed could be found in a few days of searching, and proven, with the aid of a moderately optimized, RNG-accurate combat simulator.
