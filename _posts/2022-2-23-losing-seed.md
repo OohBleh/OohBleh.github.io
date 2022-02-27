@@ -47,7 +47,7 @@ The goal of my search was to find a seed so heinous that the proof of unwinnabil
 
 As an integer, this seed is $$3,431,382,150,268,629$$ or $$\sim 3.4$$ quadrillion, but we make no claim that this is the first unwinnable seed.  This seed has the following properties: 
 
-1. Neow only offers $$1$$ removal, $$100$$ gold, $$250$$ gold for some max HP, or a swap into Cursed Key.  
+1. Neow only offers $$1$$ removal, $$100$$g, $$250$$g for some max HP, or a swap into Cursed Key.  
 2. The map forces a burning elite fight (max HP Lagavulin) on floor $$6$$ with no shops or rest sites beforehand.  
 3. The player encounters either $$2$$ or $$3$$ combats beforehand and the events only give $$1$$ removal.  
 4. The cards offered do not directly add any damage and are draw-neutral.  
@@ -190,7 +190,7 @@ To work around this, we could run the search for a longer time to find many seed
 
 As Arbiter argued, it is likely that unwinnable seeds for Ironclad and Defect exist.  However, it is also likely that a proof of unwinnability would involve the shuffle RNG of fights, and perhaps a full combat simulation to test sequences of mid-combat decisions for survivability.  Other characters' starter decks can deal damage to Lagavulin after the $$3$$-rd turn of debuffing, and exhaustively simulating more than $$10$$ turns is likely impractical.  I believe that the following search criteria are likely to yield an unwinnable Ironclad seed: 
 
-1.  $$\mathcal{N}$$: transform 1 (receive an unhelpful card), 100g, 250g for any downside, and a harmful or neutral boss relic swap (Black Star, Sacred Bark, etc)
+1.  $$\mathcal{N}$$: transform 1 (receive an unhelpful card), $$100$$g, $$250$$g for any downside, and a harmful or neutral boss relic swap (Black Star, Sacred Bark, etc)
 2.  $$\mathcal{C}(3)$$: only offered draw-neutral skill cards and unhelpful powers
 3.  $$\mathcal{P}(3)$$: no potions
 4.  $$\mathcal{E}$$: first elite is **Gremlin Nob**
