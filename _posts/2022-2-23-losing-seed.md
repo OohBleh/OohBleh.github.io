@@ -179,7 +179,7 @@ Since Lagavulin's total HP equals $$145$$, $$\mathcal{BS}$$ is unwinnable as Sil
 
 With more powerful seedsearching tools at our disposal, we return to some questions considered by Arbiter in his [blog on unwinnable seeds](https://forgottenarbiter.github.io/Is-Every-Seed-Winnable/), and some other problems.  If you are interested in joining the search, take a look at the [CUDA code](https://github.com/OohBleh/cuda-the-spire) as well as [sts_seed_search](https://github.com/gamerpuppy/sts_seed_search).  
 
-### What about an unwinnable Silent seed where the player gets Neow's Lament?  
+### What if the player gets Neow's Lament?  
 
 As a running assumption during this project, we assumed that the unwinnable seed had to be manually entered.  A manually entered seed always offers the player $$4$$ options from Neow on floor $$0$$.  If instead the player were encountered our unwinnable seed 18ISL35FYK4 by chance without having reached the Act I boss on their previous run, they would be offered Neow's Lament (or some extra max HP).  Our seed 18ISL35FYK4 would surely be winnable because the burning elite could be killing using the 3rd stack of Neow's Lament.  
 
