@@ -26,9 +26,16 @@ The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has
     - {Dodge and Roll, Accuracy, Tactician}.  
 3.  Potions available: Essence of Steel, Fruit Juice.  
 4.  Lagavulin is the first elite.  
-5.  Forced burning elite on floor $$6$$ with no shops or rest sites beforehand.  
+5.  Forced burning elite (with the metallicizing buff) on floor $$6$$ with no shops or rest sites beforehand.  
+6.  Events can give a useful card transform (e.g., Adrenaline).  
 
-Unfortunately, due to the added card draw, there are decks that can be drafted by floor 6 that, with perfect shuffle RNG, can survive the fight.  For example, with a deck of blah, the following sequence of cards played can survive the fight, if realizable: blah.  The seed is believed by many to be unwinnable, but proving it would likely require simulating the fight with Lagavulin and checking all sequences of card plays for optimal shuffle manipulation.  
+It is likely that this seed is unwinnable.  However, it can not be ruled out as winnable without detailed information about the shuffle RNG of the fight against Lagavulin.  In _Slay the Spire_, the random number generator which controls shuffle is instantiated at the start of each combat, and it depends only seed and the floor number.  By playing cards in a different order on the first cycle through the deck, the player can manipulate the order in which cards are drawn on later cycles.  
+
+For example, it is possible to reach Lagavulin with a deck which draws as follows: 
+- Strike+, Bane+, Defend, Strike, Survivor, Defend, Defend, 
+- Footwork, Neutralize, Ascender's Bane, Defend, Strike, 
+- Defend, Strike, Strike, Outmaneuver, _shuffle..._
+Depending on the order in which cards can be played on subsequent turns, it may be possible to deal exactly $$113$$ damage to Lagavulin (which starts with $$112$$ HP) before the debuffs reduce all damage to $$0$$.  With access to mid-turn deck shuffling from Adrenaline as well, this becomes much more difficult to rule out this seed as unwinnable.  
 
 ## The hunt for an abomination: 18ISL35FYK4
 
