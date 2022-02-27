@@ -4,13 +4,13 @@ title: 'An extremely unwinnable Slay the Spire seed, and how to find more'
 published: true
 ---
 ## Overview
-In this post, I will describe how the collaborative effort that proved that unwinnable _Slay the Spire_ seeds exist.  This project is a collaboration with [gamerpuppy](https://github.com/gamerpuppy) and [ForgottenArbiter](https://forgottenarbiter.github.io/) and is based on the several attempts that have been made to prove unwinnability for seeds in _Slay the Spire_.  
+In this post, I will describe a collaborative effort that proved that unwinnable _Slay the Spire_ seeds exist.  This project is joint work with [gamerpuppy](https://github.com/gamerpuppy) and [ForgottenArbiter](https://forgottenarbiter.github.io/) and is based on the several attempts that have been made to prove unwinnability for seeds in _Slay the Spire_.  
 
 ## Previous progress
 
 In a blog post on [unwinnable seeds in _Slay the Spire_](https://forgottenarbiter.github.io/Is-Every-Seed-Winnable/), ForgottenArbiter outlined a detailed approach to the problem of finding an unwinnable seed.  We take _unwinnable_ to describe any run of _Slay the Spire_ that cannot be won by any sequence of decisions allowed by the base game (ignoring glitches).  Since the random number generation of _Spire_ is determined uniquely by the run seed, the player can replay a seed, alter their card play order (and thus the outcome of later deck shuffles) slightly differently, and often unintuitive orders, to maximize health and other resources throughout the run.  
 
-By analyzing card the optimal cases of card draw and deck shuffling, Arbiter proved that Silent's starting deck loses against Lagavulin on Ascension $$18+$$, even with perfect card play and deck shuffling.  The argument completely ignores damage dealt to the player and focuses entirely on the lose condition: after $$3$$ of Lagavulin's debuff turns ($$-2$$ dexterity and $$-2$$ strength), the player can no longer deal damage.  If the player reaches a fight against Lagavulin without improving the damage of their starter deck, they lose the run.  With this in mind, he formulated the following criteria when searching for unwinnable seeds.  
+By analyzing card the optimal cases of card draw and deck shuffling, Arbiter proved that Silent's starting deck loses against Lagavulin on Ascension $$18+$$, even with perfect card play and deck shuffling.  The argument completely ignores damage dealt to the player and focuses entirely on the lose condition: after $$3$$ of Lagavulin's debuff turns ($$-2$$ dexterity and $$-2$$ strength), the player can no longer deal damage.  If the player reaches a fight against Lagavulin without directly or indirectly improving the damage of their starter deck, they lose the run.  With this in mind, he formulated the following criteria when searching for unwinnable seeds.  
 
 1. Play as Silent on Ascension $$18$$ or higher.  
 2. Forced Lagavulin elite fight on floor $$6$$, with no shops or rest sites on the first five floors.  
@@ -30,7 +30,7 @@ The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has
 
 It is likely that this seed is unwinnable.  However, it can not be ruled out as winnable without detailed information about the shuffle RNG of the fight against Lagavulin.  In _Slay the Spire_, the random number generator which controls shuffle is instantiated at the start of each combat, and it depends only seed and the floor number.  By playing cards in a different order on the first cycle through the deck, the player can manipulate the order in which cards are drawn on later cycles.  
 
-For example, it is possible to reach Lagavulin with a deck which draws as follows: 
+For example, it is possible to reach Lagavulin on this seed with a deck which draws as follows: 
 - Strike+, Bane+, Defend, Strike, Survivor, Defend, Defend, 
 - Footwork, Neutralize, Ascender's Bane, Defend, Strike, 
 - Defend, Strike, Strike, Outmaneuver, _shuffle..._
@@ -58,8 +58,7 @@ For now, we will outline the computational effort that led to its discovery.  Sc
 I first got involved in this search in early January 2022 not long after finding and routing an [Ascension 20 Heart snipe seed](https://youtu.be/8jHTNGrreTw).  I had accomplished (with glitches and some very careful RNG manipulation) the first turn-$$1$$ Heart kill since the boot bug exploited [here](https://youtu.be/4knfPJyKLYY) by ForgottenArbiter was patched.  For it, I used [gamerpuppy's sts_seed_search](https://github.com/gamerpuppy/sts_seed_search), which emulates essential seed searching functions at a low level in C++.  With this library, I am able to specify which RNG calculations I want to make, and specifically how seeds are filtered.  For speedrun-related searches in the past, I have predominantly used ForgottenArbiter's [SeedSearch](https://github.com/ForgottenArbiter/SeedSearch) mod, which runs through the backend of the base game and comes with an easy to use list of seed criteria.  
 
 I filtered based on the floor $$0$$ rewards from Neow, rewards of $$5$$ (or sometimes $$4$$) combats, and only filtered for maps with a forced floor $$6$$ elite and no shops or rest sites beforehand.  The filter order has a large impact on the rate at which seeds are tested.  
-
-Suppose we have two filters $$\mathcal{F},\mathcal{G}$$ which independent in an appropriate probabilistic sense.  If $$s,t$$ are good estimates for the times spend testing a seed against $$\mathcal{F},\mathcal{G}$$, and $$p,q$$ are the probabilities of a seed passing the filters, respectively, then the expected time to test a seed against $$\mathcal{F}$$, and then $$\mathcal{G}$$ is 
+Suppose we have two filters $$\mathcal{F},\mathcal{G}$$ which are independent in an appropriate probabilistic sense.  If $$s,t$$ are good estimates for the times spend testing a seed against $$\mathcal{F},\mathcal{G}$$, and $$p,q$$ are the probabilities of a seed passing the filters, respectively, then the expected time to test a seed against $$\mathcal{F}$$, and then $$\mathcal{G}$$ is 
 
 {:refdef: style="text-align: center;"}
 $$
@@ -101,13 +100,13 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 
 While I am optimistic that this seed is unwinnable, proving it would require fully simulating several combats.  
 
-It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor $$6$$.  Originally, the map constraint $$\mathcal{M}$$ allows only $$1$$ in $$\sim 15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only $$1$$ in every $$\sim 225,000$$ seeds passes through.  
-
-After finishing a search through the first $$10$$ trillions seeds, making many adjustments along the way, it was time for a new approach.  
+It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor $$6$$, as is the case with Arbiter's seed.  Originally, the map constraint $$\mathcal{M}$$ allows only $$1$$ in $$\sim 15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only $$1$$ in every $$\sim 225,000$$ seeds passes through.  This search ran through the first $$10$$ trillions seeds in one to two weeks of frequent breaks and chaznges to search parameters,.  It was time for a new approach.  
 
 ### the GPU seed farm
 
-After several helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational capability, allowing for simultaneous computation with tens of thousands of [threads](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)), if ran on a state-of-the-art GPU.  To optimize performance, we feed in the most efficient constraints into CUDA: $$\mathcal{N}$$ and $$\mathcal{C}(5)$$.  Any seeds that pass these filters get written to a text file which can later be fed through the C++ program for further analysis.  
+After several helpful conversations with gamerpuppy, they sent me a version of the [CUDA](https://en.wikipedia.org/wiki/CUDA) code used for finding incredible [Pandora's Box boss swaps](https://docs.google.com/spreadsheets/d/1A3oW0tgInXa3h5azNoES4PQsTy-VdLFvDmn_CIUrbJE).  In short, CUDA gives the programmer direct access to the GPU's virtual instruction set and parallel computational capability, allowing for simultaneous computation with tens of thousands of [threads](https://en.wikipedia.org/wiki/Multithreading_(computer_architecture)), if ran on a state-of-the-art GPU.  
+
+To optimize performance, we feed in the most efficient constraints into CUDA: $$\mathcal{N}$$ and $$\mathcal{C}(5)$$ and take special care to minimize slowdown caused by [branching](https://en.wikipedia.org/wiki/Branch_(computer_science)).  Any seeds that pass these filters get written to a text file which can later be fed through the C++ program for further analysis.  
 
 To understand the strength of the card reward filter, consider the following set of Silent cards: 
 
@@ -115,13 +114,15 @@ To understand the strength of the card reward filter, consider the following set
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png)
 {: refdef}
 
-With the exception of Distraction, which may give a poison or shiv-generating card, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as $$1/100$$.  With $$5$$ card rewards potentially possible before floor $$6$$, roughly $$1$$ in every $$10$$ billion seeds will have $$5$$ consecutive bad card rewards.  On a modern GPU, hundreds of seeds pass both filters each second.  Even then, not enough seeds were passing through the remaining filters.  
+With the exception of Distraction, which may give a poison or shiv-generating card, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as $$1/100$$.  With $$5$$ card rewards potentially possible before floor $$6$$, roughly $$1$$ in every $$10$$ billion seeds will have $$5$$ consecutive bad card rewards.  Even with several optimizations, the rare at which seeds passed $$\mathcal{N}$$ and $$\mathcal{C}(5)$$ was insufficient to find enough seeds passing the remaining filters $$\mathcal{P}(5)$$, $$\mathcal{E}$$, and most importantly, $$\mathcal{B}$$.  
 
 ### A final tradeoff
 
-How likely is the player to encounter $$5$$ combats in a $$\mathcal{B}$$ map?  Constraining $$5$$ combat rewards was proving to be an issue.  What if we only had $$4$$, or even $$3$$ combats in total before fighting a buffed Lagavulin?  Checking the first $$100$$ billion seeds, I discovered that as many as $$~2\%$$ of all $$\mathcal{B}$$ maps had a maximum of $$3$$ combats before floor $$6$$.  Altogether, this new constraint, call it $$\mathcal{B}(3)$$, is satisfied by $$1$$ in every $$~9.17$$ million seeds, according to the sample.  
+As a running hypothesis, I had been planning for the worst case scenario where the player has access the maximum number of combats.  Having seen hundreds of $$\mathcal{B}$$ maps, I knew that a fair number of them had only $$4$$-combat pathes.  If we could relax the constraint on card rewards, many more seeds would be printed to file from the CUDA code, and maybe enough of those seeds would then pass the remaining $$3$$ filters.  
 
-By relaxing the card constraints from $$5$$ rewards to $$3$$ (that is, replace $$\mathcal{C}(5)$$ with $$\mathcal{C}(3)$$), the CUDA code returned a batch of about $$234$$ million seeds between $$1$$ quadrillion and $$6.6$$ quadrillion seeds, after running for roughly $$16$$ hours.  Four seeds MC81APL0TK, UL8LMGQV64, 1778H44QQQP, 18ISL35FYK4 emerged after being tested against properties $$\mathcal{N}, \mathcal{C}(3), \mathcal{P}(3), \mathcal{E}, $$ and $$\mathcal{B}(3)$$,  with only the last one having a suitably unhelpul boss relic swap and event pool.  
+Checking the first $$100$$ billion seeds, I made a discovery.  As many as a third of all $$\mathcal{B}$$-maps failed to have $$5$$-combat paths, and strikingly, $$~2\%$$ of all $$\mathcal{B}$$ maps had only $$3$$ combats before the burning elite!  Altogether, this new constraint, call it $$\mathcal{B}(3)$$, is satisfied by $$1$$ in every $$~9.17$$ million seeds, according to the sample.  While this may not seem like a lot, changing the nature of the filters in this way effectively swaps two "$$1$$-in-$$100$$ filters for a single $$1$$-in-$$50$$ filter.  It also reduces a great deal of branching in the CUDA code by cutting down the scope of the main loop in the card reward filter.  
+
+After relaxing the card constraints from $$5$$ rewards to $$3$$ (that is, replace $$\mathcal{C}(5)$$ with $$\mathcal{C}(3)$$), the CUDA code returned a batch of about $$234$$ million seeds between $$1$$ quadrillion and $$6.6$$ quadrillion seeds, after only $$16$$ hours of runtime on a modern GPU.  Four seeds MC81APL0TK, UL8LMGQV64, 1778H44QQQP, 18ISL35FYK4 emerged after being tested against properties $$\mathcal{N}, \mathcal{C}(3), \mathcal{P}(3), \mathcal{E}, $$ and $$\mathcal{B}(3)$$,  with only the last one having a suitably unhelpul boss relic swap and event pool.  
 
 Finally, we are prepared to prove this seed is unwinnable.  
 
@@ -139,7 +140,7 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629$$ (also known as 18ISL35FYK4}.  We l
 4.  Each path to floor $$6$$ encounters either $$2$$ combats and $$3$$ ?-nodes, or $$3$$ combats and $$2$$ ?-nodes.  
 5.  The only map node on floor $$6$$ is an elite combat aganist Lagavulin with $$144$$ HP.  
 
-The following argument was suggested to me by Arbiter.  To prove that $$\mathcal{BS}$$ is unwinnable, we divide the fight according to the times at which a deck shuffle occurs.  In between shuffles, the player can play at most $$5$$ Strikes and at most $$1$$ Neutralize, with damage optimized by playing the Strikes as early as possible.  In this argument, we ignore the player's health, the energy cost of the player's cards, and the metallicize buff on Lagavulin.  
+The following argument was suggested to me by Arbiter.  To prove that $$\mathcal{BS}$$ is unwinnable, we divide the fight according to the times at which a deck shuffle occurs.  In between shuffles, the player can play at most $$5$$ Strikes and at most $$1$$ Neutralize, with damage optimized by playing the Strikes as early as possible.  In this argument, we ignore the player's health, the energy cost of the player's cards, and the block on Lagavulin before it is awakened.  
 
 For convenience, let $$k$$ be the combined number of copies of Escape Plan and Prepared in the player's deck.  We state and prove the following claims about combat on floor $$6$$.  
 
