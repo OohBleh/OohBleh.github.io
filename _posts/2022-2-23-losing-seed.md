@@ -27,7 +27,7 @@ The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has
 3.  Potions available: Essence of Steel, Fruit Juice.  
 4.  Lagavulin is the first elite.  
 5.  Forced burning elite (with the metallicizing buff) on floor $$6$$ with no shops or rest sites beforehand.  
-6.  Events can give a useful card transform (e.g., Adrenaline).  
+6.  ?-nodes are useless except for a possibly useful card transform (Adrenaline, etc).  
 
 It is likely that this seed is unwinnable.  However, it can not be ruled out as winnable without detailed information about the shuffle RNG of the fight against Lagavulin.  In _Slay the Spire_, the random number generator which controls shuffle is instantiated at the start of each combat, and it depends only seed and the floor number.  By playing cards in a different order on the first cycle through the deck, the player can manipulate the order in which cards are drawn on later cycles.  
 
@@ -89,8 +89,13 @@ These fractional expressions can be thought of as measures of the _efficiency_ o
 For other considerations such as ?-nodes outcomes and boss relic swaps, we print out some information on each seed that passes filters $$1$$ through $$5$$, and test everything else manually, or with Arbiter's SeedSearch.  Adjusting parameters many times, the hardest seed I found with this approach was 37UKXMQJQ which meets the above properties.  More precisely: 
 
 1. $$\mathcal{N}$$: $$1$$ removal, $$100$$g, and $$250$$g for some max HP, or swap into Black Star.  
-2. $$\mathcal{C}(5)$$: {Deflect, Prepared, Outmaneuver}, {Outmaneuver, Dodge and Roll, Blur}, {Backflip, Concentrate, Dodge and Roll}, {Concentrate, Burst, Backflip}, {Piercing Wail, Slice, Blade Dance}
-3. $$\mathcal{P}(5)$$: $$1$$ skill potion from the $$5$$-th combat (only gives Calculated Gamble, Tactician, or Setup). 
+2. $$\mathcal{C}(5)$$: 
+- {Deflect, Prepared, Outmaneuver}, 
+- {Outmaneuver, Dodge and Roll, Blur}, 
+- {Backflip, Concentrate, Dodge and Roll}, 
+- {Concentrate, Burst, Backflip}, and 
+{Piercing Wail, Slice, Blade Dance}.  
+3. $$\mathcal{P}(5)$$: $$1$$ skill potion from the $$5$$-th combat (always {Calculated Gamble, Tactician, Setup}). 
 4. $$\mathcal{E}$$ and $$\mathcal{M}$$ are met, and one of the floor $$6$$ elites is the "burning" elite.  
 4. ?-nodes: Winged Statue ($$-7$$ HP for $$1$$ removal), Scrap Ooze ($$5$$ or $$6$$ hits for Tea Set), Wheel Gremlin (always gives $$1$$ removal), and combat. 
 
@@ -130,7 +135,7 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629$$ (also known as 18ISL35FYK4}.  We l
 3.  The first 3 combats rewards before Lagavulin are: 
    - {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
    - {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
-   - {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
+   - ${Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
 4.  Each path to floor $$6$$ encounters either $$2$$ combats and $$3$$ ?-nodes, or 3 combats and $$2$$ ?-nodes.  
 5.  The only map node on floor $$6$$ is an elite combat aganist Lagavulin with $$145$$ HP.  
 
