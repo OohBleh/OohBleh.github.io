@@ -12,9 +12,9 @@ In a blog post on [unwinnable seeds in _Slay the Spire_](https://forgottenarbite
 
 By analyzing card the optimal cases of card draw and deck shuffling, Arbiter proved that Silent's starting deck loses against Lagavulin on Ascension $$18+$$, even with perfect card play and deck shuffling.  The argument completely ignores damage dealt to the player and focuses entirely on the lose condition: after $$3$$ of Lagavulin's debuff turns ($$-2$$ dexterity and $$-2$$ strength), the player can no longer deal damage.  If the player reaches a fight against Lagavulin without improving the damage of their starter deck, they lose the run.  With this in mind, he formulated the following criteria when searching for unwinnable seeds.  
 
-0. Play as Silent on Ascension $$18$$ or higher.  
-1. Forced Lagavulin elite fight on floor $$6$$, with no shops or rest sites on the first five floors.  
-2. No Neow bonuses, potion drops, or card rewards which help the player deal damage to Lagavulin.  
+1. Play as Silent on Ascension $$18$$ or higher.  
+2. Forced Lagavulin elite fight on floor $$6$$, with no shops or rest sites on the first five floors.  
+3. No Neow bonuses, potion drops, or card rewards which help the player deal damage to Lagavulin.  
 
 The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has the following properties: 
 
@@ -101,7 +101,7 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 
 While I am optimistic that this seed is unwinnable, proving it would require fully simulating several combats.  
 
-It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor 6.  Originally, the map constraint $$\mathcal{M}$$ allows only $$1$$ in $$\sim 15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only $$1$$ in every $$\sim 225,000$$ seeds passes through.  
+It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor $$6$$.  Originally, the map constraint $$\mathcal{M}$$ allows only $$1$$ in $$\sim 15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only $$1$$ in every $$\sim 225,000$$ seeds passes through.  
 
 After finishing a search through the first $$10$$ trillions seeds, making many adjustments along the way, it was time for a new approach.  
 
@@ -129,14 +129,14 @@ Finally, we are prepared to prove this seed is unwinnable.
 
 Let $$\mathcal{BS} := 3,431,382,150,268,629$$ (also known as 18ISL35FYK4}.  We list some useful facts about this seed.  
 
-**Fact A**. As Silent on Ascension 18 or higher with, a normal run with seed $$\mathcal{BS}$$ manually entered has the following properties.  
+**Fact A**. As Silent on Ascension $$18$$ or higher with, a normal run with seed $$\mathcal{BS}$$ manually entered has the following properties.  
 1.  Neow offers $$1$$ card removal, gold, or a boss swap into Cursed Key.  
-2.  Before floor 6, the only ?-node outcomes are Scrap Ooze, Golden Idol, and The Cleric, in this order.  
-3.  The first 3 combats rewards before Lagavulin are: 
+2.  Before floor $$6$$, the only ?-node outcomes are Scrap Ooze, Golden Idol, and The Cleric, in this order.  
+3.  The first $$3$$ combats rewards before Lagavulin are: 
    - {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
    - {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
    - {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
-4.  Each path to floor $$6$$ encounters either $$2$$ combats and $$3$$ ?-nodes, or 3 combats and $$2$$ ?-nodes.  
+4.  Each path to floor $$6$$ encounters either $$2$$ combats and $$3$$ ?-nodes, or $$3$$ combats and $$2$$ ?-nodes.  
 5.  The only map node on floor $$6$$ is an elite combat aganist Lagavulin with $$145$$ HP.  
 
 The following argument was suggested to me by Arbiter.  To prove that $$\mathcal{BS}$$ is unwinnable, we divide the fight according to the times at which a deck shuffle occurs.  In between shuffles, the player can play at most $$5$$ Strikes and at most $$1$$ Neutralize, with damage optimized by playing the Strikes as early as possible.  In this argument, we ignore the player's health, the energy cost of the player's cards, and the metallicize buff on Lagavulin.  
@@ -190,7 +190,7 @@ To work around this, we could run the search for a longer time to find many seed
 
 As Arbiter argued, it is likely that unwinnable seeds for Ironclad and Defect exist.  However, it is also likely that a proof of unwinnability would involve the shuffle RNG of fights, and perhaps a full combat simulation to test sequences of mid-combat decisions for survivability.  Other characters' starter decks can deal damage to Lagavulin after the $$3$$-rd turn of debuffing, and exhaustively simulating more than $$10$$ turns is likely impractical.  I believe that the following search criteria are likely to yield an unwinnable Ironclad seed: 
 
-1.  $$\mathcal{N}$$: transform 1 (receive an unhelpful card), $$100$$g, $$250$$g for any downside, and a harmful or neutral boss relic swap (Black Star, Sacred Bark, etc)
+1.  $$\mathcal{N}$$: transform $$1$$ (receive an unhelpful card), $$100$$g, $$250$$g for any downside, and a harmful or neutral boss relic swap (Black Star, Sacred Bark, etc)
 2.  $$\mathcal{C}(3)$$: only offered draw-neutral skill cards and unhelpful powers
 3.  $$\mathcal{P}(3)$$: no potions
 4.  $$\mathcal{E}$$: first elite is **Gremlin Nob**
