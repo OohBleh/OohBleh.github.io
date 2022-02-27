@@ -137,7 +137,7 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629$$ (also known as 18ISL35FYK4}.  We l
    - {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
    - {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
 4.  Each path to floor $$6$$ encounters either $$2$$ combats and $$3$$ ?-nodes, or $$3$$ combats and $$2$$ ?-nodes.  
-5.  The only map node on floor $$6$$ is an elite combat aganist Lagavulin with $$145$$ HP.  
+5.  The only map node on floor $$6$$ is an elite combat aganist Lagavulin with $$144$$ HP.  
 
 The following argument was suggested to me by Arbiter.  To prove that $$\mathcal{BS}$$ is unwinnable, we divide the fight according to the times at which a deck shuffle occurs.  In between shuffles, the player can play at most $$5$$ Strikes and at most $$1$$ Neutralize, with damage optimized by playing the Strikes as early as possible.  In this argument, we ignore the player's health, the energy cost of the player's cards, and the metallicize buff on Lagavulin.  
 
@@ -173,7 +173,7 @@ To complete the proof, consider the sequence $$1 = t(1)\leq t(2)\leq \cdots$$ of
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
-Since Lagavulin's total HP equals $$145$$, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension $$18$$ or higher.  
+Since Lagavulin's total HP equals $$144$$, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension $$18$$ or higher.  
 
 ## Future work
 
