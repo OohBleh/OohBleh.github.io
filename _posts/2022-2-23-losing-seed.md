@@ -34,7 +34,8 @@ For example, it is possible to reach Lagavulin with a deck which draws as follow
 - Strike+, Bane+, Defend, Strike, Survivor, Defend, Defend, 
 - Footwork, Neutralize, Ascender's Bane, Defend, Strike, 
 - Defend, Strike, Strike, Outmaneuver, _shuffle..._
-Depending on the order in which cards can be played on subsequent turns, it may be possible to deal exactly $$113$$ damage to Lagavulin (which starts with $$112$$ HP) before the debuffs reduce all damage to $$0$$.  With access to mid-turn deck shuffling from Adrenaline as well, this becomes much more difficult to rule out this seed as unwinnable.  
+
+Depending on the order in which cards can be played on subsequent turns, then it has been shown that with perfect shuffle on future turns, the player is able to deal exactly $$113$$ damage to Lagavulin (which starts with $$112$$ HP) before the debuffs reduce all damage to $$0$$.  With access to mid-turn deck shuffling from Adrenaline as well, this becomes much more difficult to analyze.  
 
 ## The hunt for an abomination: 18ISL35FYK4
 
