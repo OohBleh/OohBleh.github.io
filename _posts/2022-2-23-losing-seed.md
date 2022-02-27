@@ -173,7 +173,7 @@ To complete the proof, consider the sequence $$1 = t(1)\leq t(2)\leq \cdots$$ of
 {:refdef: style="text-align: center;"}
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/damage-between-shuffles.png).  
 {: refdef}
-Since Lagavulin's total HP equals $$145$$, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension $$18$$ or higher.  $$\hfill\square$$
+Since Lagavulin's total HP equals $$145$$, $$\mathcal{BS}$$ is unwinnable as Silent on Ascension $$18$$ or higher.  
 
 ## Future work
 
