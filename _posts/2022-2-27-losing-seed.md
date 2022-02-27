@@ -230,4 +230,7 @@ By node glitches alone, the player significantly increases their chance of acces
 
 I doubt such a seed exists.  If one does, it is unclear how one would find it, let alone prove it is unwinnable.  
 
-That it has taken $$3$$ years since the game's main release (and over $$4$$ years since it was released for early access) to find and prove seed unwinnability is a testament to the beauty of _Slay the Spire_'s design.  How far this project is an ongoing challenge and I invite any interested programmer to join in.
+
+## Final remarks
+
+That it has taken $$3$$ years since the game's main release (and over $$4$$ years since it was released for early access) to find and prove seed unwinnability is a testament to the strength of _Slay the Spire_'s balance and design.  How much further can we go?  I do not know, but I invite any interested programmer to get in touch by email (see main blog page) or other platforms and join the fun.  
