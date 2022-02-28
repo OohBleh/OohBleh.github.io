@@ -45,7 +45,7 @@ The goal of my search was to find a seed so heinous that the proof of unwinnabil
 ![bad map wow](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/heinous-map.png){:height="433px" width="547px"}
 {: refdef}
 
-As an integer, this seed is $$3,431,382,150,268,629$$ or $$\sim 3.4$$ quadrillion, but we make no claim that this is the first unwinnable seed.  This seed has the following properties: 
+As an integer, this seed is $$3,431,382,150,268,629$$ or $$\sim 3.4$$ quadrillion, but we make no claim that this is the first seed (as a positive integer) which is unwinnable.  This seed has the following properties: 
 
 1. Neow only offers $$1$$ removal, gold, or a swap into Cursed Key.  
 2. The map forces a burning elite fight (max HP Lagavulin) on floor $$6$$ with no shops or rest sites beforehand.  
