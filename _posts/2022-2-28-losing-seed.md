@@ -18,7 +18,7 @@ By analyzing optimal cases of card draw and deck shuffling, Arbiter proved that 
 
 The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has the following properties: 
 
-1. Neow Options: upgrade a card, $$100$$g, remove $$2$$ Cards (take $$15$$ damage), swap for Cursed Key
+1. Neow Options: upgrade a card, $$100$$g, remove $$2$$ cards (take $$15$$ damage), swap for Cursed Key
 2. Card and potions before floor $$6$$: 
     - {Bane, Outmaneuver, Deflect}
     - {Outmaneuver, Accuracy, Footwork} and Essence of Steel
