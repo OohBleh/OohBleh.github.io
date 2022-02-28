@@ -132,7 +132,7 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629$$ (also known as 18ISL35FYK4}.  We l
 
 **Fact A**. As Silent on Ascension $$18$$ or higher with, a normal run with seed $$\mathcal{BS}$$ manually entered has the following properties.  
 1.  Neow offers $$1$$ card removal, gold, or a boss swap into Cursed Key.  
-2.  Before floor $$6$$, the only ?-node outcomes are Scrap Ooze, Golden Idol, and The Cleric, in this order.  
+2.  Before floor $$6$$, the only ?-node outcomes are World of Goop, Golden Idol, and The Cleric, in this order.  
 3.  The first $$3$$ combats rewards before Lagavulin are: 
    - {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
    - {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
