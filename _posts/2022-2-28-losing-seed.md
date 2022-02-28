@@ -28,7 +28,7 @@ The "most unwinnable" seed that resulted from this search is 3LWVGX7BL which has
 4.  Forced burning elite (with the metallicizing buff) on floor $$6$$ with no shops or rest sites beforehand.  
 5.  ?-nodes are useless except for a possibly useful card transform (Adrenaline, etc).  
 
-It is likely that this seed is unwinnable.  However, it can not be ruled out as winnable without detailed information about the shuffle RNG of the fight against Lagavulin.  In _Slay the Spire_, the random number generator which controls shuffle is instantiated at the start of each combat, and it depends only seed and the floor number.  By playing cards in a different order on the first cycle through the deck, the player can manipulate the order in which cards are drawn on later cycles.  
+It is likely that this seed is unwinnable.  However, it can not be ruled out as winnable without detailed information about the shuffle RNG of the fight against Lagavulin.  In _Slay the Spire_, the random number generator which controls shuffle is instantiated at the start of each combat, and it depends only on the seed and the floor number.  By playing cards in a different order on the first cycle through the deck, the player can manipulate the order in which cards are drawn on later cycles.  
 
 For example, it is possible to reach Lagavulin on this seed with a deck which draws as follows: 
 - Strike+, Bane+, Defend, Strike, Survivor, Defend, Defend, 
