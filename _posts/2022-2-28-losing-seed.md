@@ -100,7 +100,7 @@ For other considerations such as ?-nodes outcomes and boss relic swaps, we print
 
 While I am optimistic that this seed is unwinnable, proving it would require fully simulating several combats.  
 
-It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor $$6$$, as is the case with Arbiter's seed.  Originally, the map constraint $$\mathcal{M}$$ allows only $$1$$ in $$\sim 15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only $$1$$ in every $$\sim 225,000$$ seeds passes through.  This search ran through the first $$10$$ trillions seeds in one to two weeks of frequent breaks and chaznges to search parameters,.  It was time for a new approach.  
+It became clear to me that in order to find a suitable seed, one which does not require brute force calculations and much casework, I would need to also force the player to fight a buffed Lagavulin on floor $$6$$, as is the case with Arbiter's seed.  Originally, the map constraint $$\mathcal{M}$$ allows only $$1$$ in $$\sim 15,000$$ seeds through.  For a forced burning elite with no shops or rest sites beforehand (call this filter $$\mathcal{B}$$), only $$1$$ in every $$\sim 225,000$$ seeds passes through.  This search ran through the first $$10$$ trillions seeds in one to two weeks of frequent breaks and changes to search parameters,.  It was time for a new approach.  
 
 ### the GPU seed farm
 
