@@ -136,7 +136,7 @@ Let $$\mathcal{BS} := 3,431,382,150,268,629$$ (also known as 18ISL35FYK4}.  We l
 3.  The first $$3$$ combats rewards before Lagavulin are: 
    - {Prepared, Dodge and Roll, Escape Plan}, gold, and no potion.  
    - {Escape Plan, Outmaneuver, Prepared}, gold, and no potion.  
-   - {Prepared, Dodge and Roll, Footwork}, gold, and no potion.  
+   - {Prepared, Dodge and Roll, Footwork}, gold, and a Block Potion.  
 4.  Each path to floor $$6$$ encounters either $$2$$ combats and $$3$$ ?-nodes, or $$3$$ combats and $$2$$ ?-nodes.  
 5.  The only map node on floor $$6$$ is an elite combat aganist Lagavulin with $$144$$ HP.  
 
