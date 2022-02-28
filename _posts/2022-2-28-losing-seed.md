@@ -114,11 +114,11 @@ To understand the strength of the card reward filter, consider the following set
 ![please work prose](https://raw.githubusercontent.com/OohBleh/OohBleh.github.io/master/_posts/bad-silent-cards.png)
 {: refdef}
 
-With the exception of Distraction, which may give a poison or shiv-generating card, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as $$1/100$$.  With $$5$$ card rewards potentially possible before floor $$6$$, roughly $$1$$ in every $$10$$ billion seeds will have $$5$$ consecutive bad card rewards.  Even with several optimizations, the rare at which seeds passed $$\mathcal{N}$$ and $$\mathcal{C}(5)$$ was insufficient to find enough seeds passing the remaining filters $$\mathcal{P}(5)$$, $$\mathcal{E}$$, and most importantly, $$\mathcal{B}$$.  
+With the exception of Distraction, which may give a poison or shiv-generating card, these cards cannot be used to deal direct damage to Lagavulin or to gain positive draw.  For simplicity, we will approximate the probability that a card reward lies in this set as $$1/100$$.  With $$5$$ card rewards potentially possible before floor $$6$$, roughly $$1$$ in every $$10$$ billion seeds will have $$5$$ consecutive bad card rewards.  Even with several optimizations, the rate at which seeds passed $$\mathcal{N}$$ and $$\mathcal{C}(5)$$ was insufficient to find enough seeds passing the remaining filters $$\mathcal{P}(5)$$, $$\mathcal{E}$$, and most importantly, $$\mathcal{B}$$.  
 
 ### A final tradeoff
 
-As a running hypothesis, I had been planning for the worst case scenario where the player has access the maximum number of combats.  Having seen hundreds of $$\mathcal{B}$$ maps, I knew that a fair number of them had only $$4$$-combat pathes.  If we could relax the constraint on card rewards, many more seeds would be printed to file from the CUDA code, and maybe enough of those seeds would then pass the remaining $$3$$ filters.  
+As a running hypothesis, I had been planning for the worst case scenario where the player has access the maximum number of combats.  Having seen hundreds of $$\mathcal{B}$$ maps, I knew that a fair number of them had only $$4$$-combat paths.  If we could relax the constraint on card rewards, many more seeds would be printed to file from the CUDA code, and maybe enough of those seeds would then pass the remaining $$3$$ filters.  
 
 Checking the first $$100$$ billion seeds, I made a discovery.  As many as a third of all $$\mathcal{B}$$-maps failed to have $$5$$-combat paths, and strikingly, $$~2\%$$ of all $$\mathcal{B}$$ maps had only $$3$$ combats before the burning elite!  Altogether, this new constraint, call it $$\mathcal{B}(3)$$, is satisfied by $$1$$ in every $$~9.17$$ million seeds, according to the sample.  While this may not seem like a lot, changing the nature of the filters in this way effectively swaps two "$$1$$-in-$$100$$ filters for a single $$1$$-in-$$50$$ filter.  It also reduces a great deal of branching in the CUDA code by cutting down the scope of the main loop in the card reward filter.  
 
@@ -224,7 +224,7 @@ If you watched [_Slay the Spire_ at AGDQ 2022](https://youtu.be/Q7FlPBFKX_Q) or 
 1. (double node) enter $$2$$ or more map nodes on the same floor, 
 2. (node dupe) enter the same map node twice, 
 3. (node reroll) change the combat in a duplicated combat node, and 
-4. (node ladder) climb the map on multiple pathes at once.  
+4. (node ladder) climb the map on multiple paths at once.  
 
 By node glitches alone, the player significantly increases their chance of accessing damage-dealing cards, deck manipulation, potions, card removals, card upgrades, and shops from ?-nodes.  While it may be possible to contrive scenarios for unwinnable glitched runs, they are necessarily more scarce by several orders of magnitude.  For example, by duplicating combats, the player can turn a $$3$$-combat path into one with $$5$$ or even $$6$$ combats before the burning elite.  By visiting additional map nodes, the player also changes the floor number during the burning elite fight, and can improve their deck manipulation in this fashion.  
 
