@@ -152,7 +152,7 @@ Since Silent's deck begins with $$12$$ basic cards and Ascender's Bane, and by f
 
 **Claim B.1**.  If the player shuffles the deck at the start of turn $$t$$ where $$t \geq 2$$, then the next deck shuffle occurs, at the earliest, at the start of turn $$t+2$$.  
 
-Noting that by floor $$6$$, at most $$2$$ removals are possible, and since Ascender's Bane can be exhausted, it follows that combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Since $$t \geq 2$$, turn $$t$$ begins with the player drawing $$5$$ cards.  Moreover, due to the limited card pool and relics, and the lack of potions, no cards can be played to increase the number of cards in-hand.  It follows that the player has at most $$5$$ cards in-hand just before the shuffle at time $$t$$.  
+Noting that by floor $$6$$, at most $$2$$ removals are possible, and since Ascender's Bane can be exhausted, it follows that combined number of cards in the player's hand, discard pile, and draw pile is always least $$10 + k$$.  Since $$t \geq 2$$, turn $$t$$ begins with the player drawing $$5$$ cards.  Moreover, due to the limited card pool and relics, and the available potions, no cards can be played to increase the number of cards in-hand.  It follows that the player has at most $$5$$ cards in-hand just before the shuffle at time $$t$$.  
 
 Since the player has at most $$5$$ cards in-hand at the start of turn $$t$$, there are at least $$5+k$$ cards in the draw pile.  On turns $$t$$ and $$t+1$$, at most $$k$$ draw cards (Escape Plan and Prepared) can be played.  It follows that the player cannot shuffle the deck again during turns $$t$$ and $$t+1$$.  
 
